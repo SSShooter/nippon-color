@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'XANO';
+  /* src: url('../font/source.eot'); */
+  src:
+    /* url('../font/source.eot?#font-spider') format('embedded-opentype'), */ url('./font/XANO-mincho-U32.ttf')
+    format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MONO';
+  src: url('./font/BPtypewrite.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
