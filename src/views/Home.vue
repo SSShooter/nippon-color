@@ -21,13 +21,14 @@
         :borderColor="colorSelected.f"
         @colorChange="handleColorChange" />
       <div class="kanji">
-        {{colorSelected.name}}
+        {{colorSelected.name||'日本の伝統色'}}
       </div>
       <div class="romaji">
-        {{colorSelected.color}}
+        {{colorSelected.color||'The Traditional Colors of Japan'}}
       </div>
       <div class="rgb-block">
-        <div v-for="(el,i) in ['r','g','b']" :key="el" 
+        <div v-for="(el,i) in ['r','g','b']"
+          :key="el"
           :style="`width:${colorSelected.Drgb?(colorSelected.Drgb[i]/255*100):0}%`"
           :class="{[el]:true,'bg-bright':colorSelected.f === 'b'}"></div>
       </div>
@@ -35,18 +36,22 @@
         v-if="colorSelected.Drgb">
         <template v-for="el in ['R','G','B']">
           <div :key="el">{{el}}</div>
-          <div :key="el + 'n'" class="n">0</div>
+          <div :key="el + 'n'"
+            class="n">0</div>
         </template>
       </div>
       <div class="cmyk-number"
         v-if="colorSelected.cmyk">
-        <div v-for="el in ['c','m','y','k']" :key="el" class="n" :class="{[el]:true}">0</div>
+        <div v-for="el in ['c','m','y','k']"
+          :key="el"
+          class="n"
+          :class="{[el]:true}">0</div>
       </div>
     </div>
     <div class="tab">
       <ColorTab class="js-tab-item"
-        @click.native="colorSelected = color"
         v-for="color in colorList"
+        @click.native="changeColor(color)"
         :key="color.name"
         :kanji="color.name"
         :romaji="color.color"
@@ -57,18 +62,18 @@
 </template>
 
 <script>
-import anime from "animejs";
-import ColorTab from "@/components/ColorTab.vue";
-import ColorSeriesPicker from "@/components/ColorSeriesPicker.vue";
-import colorList from "@/data/color";
+import anime from 'animejs'
+import ColorTab from '@/components/ColorTab.vue'
+import ColorSeriesPicker from '@/components/ColorSeriesPicker.vue'
+import colorList from '@/data/color'
 
 export default {
-  name: "home",
+  name: 'home',
   data() {
     return {
       colorList: [],
       colorSelected: {}
-    };
+    }
   },
   components: {
     ColorTab,
@@ -77,75 +82,100 @@ export default {
   watch: {
     colorList() {
       this.$nextTick(() => {
-        this.listAnime();
-      });
+        this.listAnime()
+      })
     },
     colorSelected() {
       this.$nextTick(() => {
-        this.displayAnime();
-      });
+        this.displayAnime()
+      })
+    },
+    $route(r) {
+      this.retrieveColorAndSelect(r.query.c)
     }
   },
   mounted() {
-    this.colorList = colorList;
+    // trigger watch colorList
+    this.colorList = colorList
+    this.retrieveColorAndSelect(this.$route.query.c)
+    let monji = document.querySelectorAll('.display .kanji,.romaji')
+    anime({
+      targets: monji,
+      opacity: [0, 1],
+      duration: 2500,
+      easing: 'easeOutSine'
+    })
   },
   methods: {
+    retrieveColorAndSelect(rgb) {
+      if (rgb) {
+        let color = this.colorList.find(val => val.rgb === rgb)
+        this.colorSelected = color
+      } else {
+        this.colorSelected = {
+          rgb: 'ffffff'
+        }
+      }
+    },
     handleColorChange(color) {
-      if (color === "all") this.colorList = colorList;
-      else this.colorList = colorList.filter(val => val.c === color);
-      this.colorSelected = this.colorList[0];
+      if (color === 'all') this.colorList = colorList
+      else this.colorList = colorList.filter(val => val.c === color)
+      this.colorSelected = this.colorList[0]
+    },
+    changeColor(color) {
+      this.$router.push({ path: '/', query: { c: color.rgb } })
     },
     share(name) {
       window.open(
         `https://twitter.com/intent/tweet?hashtags=nipponcolors&via=zhoudejie&text=${name ||
-          ""}`
-      );
+          ''}`
+      )
     },
     listAnime() {
       anime({
-        targets: document.querySelectorAll(".js-tab-item"),
+        targets: document.querySelectorAll('.js-tab-item'),
         translateY: [250, 0],
         opacity: [0, 1],
-        easing: "easeOutSine",
+        easing: 'easeOutSine',
         delay: function(el, i, l) {
-          let delay = 80 - i;
-          if (delay > 1) return i * delay;
-          else return i;
+          let delay = 80 - i
+          if (delay > 1) return i * delay
+          else return i
           // hack
           // TODO 元素可见时添加动画，并且需要使用节流函数
         }
-      });
+      })
     },
     displayAnime() {
-      let monji = document.querySelectorAll(".display .kanji,.romaji");
-      let rgb = document.querySelectorAll(".display .rgb-number .n");
-      let cmyk = document.querySelectorAll(".display .cmyk-number .n");
-      anime.remove([monji, rgb, cmyk]);
+      let monji = document.querySelectorAll('.display .kanji,.romaji')
+      let rgb = document.querySelectorAll('.display .rgb-number .n')
+      let cmyk = document.querySelectorAll('.display .cmyk-number .n')
+      anime.remove([monji, rgb, cmyk])
       anime({
         targets: monji,
         translateX: [250, 0],
         opacity: [0, 1],
-        easing: "easeOutSine"
-      });
+        easing: 'easeOutSine'
+      })
       anime({
         targets: rgb,
         innerHTML: (el, i, l) => {
-          return this.colorSelected.Drgb[i];
+          return this.colorSelected.Drgb[i]
         },
         round: 1,
-        easing: "easeOutSine"
-      });
+        easing: 'easeOutSine'
+      })
       anime({
         targets: cmyk,
         innerHTML: (el, i, l) => {
-          return this.colorSelected.cmyk.slice(i * 3, (i + 1) * 3);
+          return this.colorSelected.cmyk.slice(i * 3, (i + 1) * 3)
         },
         round: 1,
-        easing: "easeOutSine"
-      });
+        easing: 'easeOutSine'
+      })
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -206,14 +236,14 @@ export default {
       }
     }
     .rgb-number {
-      font-family: "MONO";
+      font-family: 'MONO';
       font-size: 1.3rem;
       display: flex;
       justify-content: space-around;
     }
     // 需要等宽字体
     .cmyk-number {
-      font-family: "MONO";
+      font-family: 'MONO';
       font-size: 1.3rem;
       display: flex;
       flex-direction: column;
@@ -231,22 +261,22 @@ export default {
       }
       .c {
         &::after {
-          content: "c";
+          content: 'c';
         }
       }
       .m {
         &::after {
-          content: "m";
+          content: 'm';
         }
       }
       .y {
         &::after {
-          content: "y";
+          content: 'y';
         }
       }
       .k {
         &::after {
-          content: "k";
+          content: 'k';
         }
       }
     }

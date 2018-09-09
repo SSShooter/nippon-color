@@ -1,6 +1,5 @@
 <template>
-  <div class="card"
-    :href="'#'+romaji">
+  <div class="card">
     <div class="color-block"
       :style="`background-color:#${rgb};`"></div>
     <div class="monji-block">

@@ -14,3 +14,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+html {
+  user-select: none; 
+  outline: none; 
+}
