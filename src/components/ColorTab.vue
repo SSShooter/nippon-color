@@ -46,8 +46,8 @@ export default {
     justify-content: center;
     align-items: flex-start;
     .kanji {
+      font-family: 'XANO';
       width: 100%;
-      // overflow force text-align center ?
       text-align: left;
       overflow: hidden;
       text-overflow: ellipsis;

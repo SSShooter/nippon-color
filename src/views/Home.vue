@@ -6,11 +6,9 @@
 
       <ShareButton @click.native="share(colorSelected.name)"
         class="share" />
-      <div>
         <!-- 添加到喜爱颜色 -->
         <!-- 复制hex -->
         <!-- 随机 -->
-      </div>
       <ShareButton class="share"
         :fillColor="colorSelected.f"
         @click.native="share(colorSelected.name)" />
@@ -45,7 +43,8 @@
           :class="{[el]:true}">0</div>
       </div>
     </div>
-    <div class="tab">
+    <div class="tab-wrapper">
+      <div class="tab">
       <ColorTab class="js-tab-item tab-item"
         v-for="color in colorList"
         @click.native="changeColor(color)"
@@ -54,24 +53,25 @@
         :romaji="color.color"
         :cmyk="color.cmyk"
         :rgb="color.rgb" />
+        </div>
     </div>
   </div>
 </template>
 
 <script>
-import anime from 'animejs'
-import ColorTab from '@/components/ColorTab.vue'
-import ColorSeriesPicker from '@/components/ColorSeriesPicker.vue'
-import ShareButton from '@/components/ShareButton.vue'
-import colorList from '@/data/color'
+import anime from "animejs";
+import ColorTab from "@/components/ColorTab.vue";
+import ColorSeriesPicker from "@/components/ColorSeriesPicker.vue";
+import ShareButton from "@/components/ShareButton.vue";
+import colorList from "@/data/color";
 
 export default {
-  name: 'home',
+  name: "home",
   data() {
     return {
       colorList: [],
       colorSelected: {}
-    }
+    };
   },
   components: {
     ColorTab,
@@ -81,97 +81,97 @@ export default {
   watch: {
     colorList() {
       this.$nextTick(() => {
-        this.listAnime()
-      })
+        this.listAnime();
+      });
     },
     colorSelected() {
       this.$nextTick(() => {
-        this.displayAnime()
-      })
+        this.displayAnime();
+      });
     },
     $route(r) {
-      this.retrieveColorAndSelect(r.query.c)
+      this.retrieveColorAndSelect(r.query.c);
     }
   },
   mounted() {
     // trigger watch colorList
-    this.colorList = colorList
-    this.retrieveColorAndSelect(this.$route.query.c)
+    this.colorList = colorList;
+    this.retrieveColorAndSelect(this.$route.query.c);
   },
   methods: {
     retrieveColorAndSelect(rgb) {
       if (rgb) {
-        let color = this.colorList.find(val => val.rgb === rgb)
-        this.colorSelected = color
+        let color = this.colorList.find(val => val.rgb === rgb);
+        this.colorSelected = color;
       } else {
         this.colorSelected = {
-          rgb: 'ffffff'
-        }
+          rgb: "ffffff"
+        };
       }
     },
     handleColorChange(color) {
-      if (color === 'all') this.colorList = colorList
-      else this.colorList = colorList.filter(val => val.c === color)
-      this.colorSelected = this.colorList[0]
+      if (color === "all") this.colorList = colorList;
+      else this.colorList = colorList.filter(val => val.c === color);
+      this.colorSelected = this.colorList[0];
     },
     changeColor(color) {
-      this.$router.push({ path: '/', query: { c: color.rgb } })
+      this.$router.push({ path: "/", query: { c: color.rgb } });
     },
     share(name) {
       window.open(
         `https://twitter.com/intent/tweet?hashtags=nipponcolors&via=zhoudejie&text=${name ||
-          ''}`
-      )
+          ""}`
+      );
     },
     listAnime() {
       anime({
-        targets: document.querySelectorAll('.js-tab-item'),
+        targets: document.querySelectorAll(".js-tab-item"),
         translateY: [250, 0],
         opacity: [0, 1],
-        easing: 'easeOutSine',
+        easing: "easeOutSine",
         delay: function(el, i, l) {
-          let delay = 80 - i
-          if (delay > 1) return i * delay
-          else return i
+          let delay = 80 - i;
+          if (delay > 1) return i * delay;
+          else return i;
           // hack
           // TODO 元素可见时添加动画，并且需要使用节流函数
         }
-      })
+      });
     },
     displayAnime() {
-      let monji = document.querySelectorAll('.display .kanji,.romaji')
-      let rgb = document.querySelectorAll('.display .rgb-number .n')
-      let cmyk = document.querySelectorAll('.display .cmyk-number .n')
-      anime.remove([monji, rgb, cmyk])
+      let monji = document.querySelectorAll(".display .kanji,.romaji");
+      let rgb = document.querySelectorAll(".display .rgb-number .n");
+      let cmyk = document.querySelectorAll(".display .cmyk-number .n");
+      anime.remove([monji, rgb, cmyk]);
       anime({
         targets: monji,
         translateX: [150, 0],
         opacity: [0, 1],
-        easing: 'easeOutSine'
-      })
+        easing: "easeOutSine"
+      });
       anime({
         targets: rgb,
         innerHTML: (el, i, l) => {
-          return this.colorSelected.Drgb[i]
+          return this.colorSelected.Drgb[i];
         },
         round: 1,
-        easing: 'easeOutSine'
-      })
+        easing: "easeOutSine"
+      });
       anime({
         targets: cmyk,
         innerHTML: (el, i, l) => {
-          return this.colorSelected.cmyk.slice(i * 3, (i + 1) * 3)
+          return this.colorSelected.cmyk.slice(i * 3, (i + 1) * 3);
         },
         round: 1,
-        easing: 'easeOutSine'
-      })
+        easing: "easeOutSine"
+      });
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@import '@/mixin.scss';
+@import "@/mixin.scss";
 .home {
   height: 100%;
   display: flex;
@@ -206,6 +206,7 @@ export default {
       letter-spacing: 0.2rem;
     }
     .kanji {
+      font-family: "XANO";
       position: absolute;
       bottom: 1rem;
       left: 1rem;
@@ -229,14 +230,14 @@ export default {
       }
     }
     .rgb-number {
-      font-family: 'MONO';
+      font-family: "MONO";
       font-size: 1.3rem;
       display: flex;
       justify-content: space-around;
     }
     // mononspace needed
     .cmyk-number {
-      font-family: 'MONO';
+      font-family: "MONO";
       font-size: 1.3rem;
       display: flex;
       flex-direction: column;
@@ -254,72 +255,77 @@ export default {
       }
       .c {
         &::after {
-          content: 'c';
+          content: "c";
         }
       }
       .m {
         &::after {
-          content: 'm';
+          content: "m";
         }
       }
       .y {
         &::after {
-          content: 'y';
+          content: "y";
         }
       }
       .k {
         &::after {
-          content: 'k';
+          content: "k";
         }
       }
     }
   }
-  .tab {
+  .tab-wrapper {
     flex-shrink: 0;
+    height: 100%;
+    overflow-y: scroll;
     @include for-phone {
       flex-basis: 100px;
     }
 
     @include for-tablet {
-      display: flex;
-      justify-content: flex-start;
-      align-content: flex-start;
       flex-basis: 400px;
-      flex-wrap: wrap;
     }
     @include for-desktop {
-      display: flex;
-      justify-content: flex-start;
-      align-content: flex-start;
       flex-basis: 800px;
-      flex-wrap: wrap;
     }
-    height: 100%;
-    overflow-y: scroll;
-
-    position: relative;
-    &:before {
-      content: '';
-      display: block;
+    @include for-desktop-plus {
+      flex-basis: 1200px;
+    }
+    .tab {
       width: 100%;
-      height: 100%;
-      position: absolute;
-      background: url(../assets/64253519_p3.png);
-      background-attachment: local;
-      background-repeat: repeat-y;
-      opacity: 0.3;
-    }
-
-    .tab-item {
-      margin-bottom: 1rem;
-      @include for-phone {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
         width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url(../assets/64253519_p3.png);
+        background-attachment: local;
+        background-repeat: repeat-y;
+        opacity: 0.3;
       }
-      @include for-tablet {
-        width: 33%;
+      @include for-tablet-up {
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
       }
-      @include for-desktop {
-        width: 25%;
+      .tab-item {
+        margin-bottom: 1rem;
+        @include for-phone {
+          width: 100%;
+        }
+        @include for-tablet {
+          width: 33%;
+        }
+        @include for-desktop {
+          width: 25%;
+        }
+        @include for-desktop-plus {
+          width: 20%;
+        }
       }
     }
   }

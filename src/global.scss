@@ -1,0 +1,36 @@
+@import "./mixin.scss";
+
+@font-face {
+  font-family: "XANO";
+  /* src: url('../font/source.eot'); */
+  src:
+    /* url('../font/source.eot?#font-spider') format('embedded-opentype'), */ url("./font/XANO-mincho-U32.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MONO";
+  src: url("./font/BPtypewrite.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'MONO', 'Avenir', Helvetica, Arial, sans-serif;
+  user-select: none;
+  outline: none;
+  @include for-phone {
+    font-size: 15px;
+  }
+  @include for-tablet {
+    font-size: 20px;
+  }
+  @include for-desktop {
+    font-size: 23.5px;
+  }
+  @include for-desktop-plus {
+    font-size: 24px;
+  }
+}

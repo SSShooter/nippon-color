@@ -16,7 +16,6 @@ html {
 }
 #app {
   height: 100%;
-  font-family: 'XANO', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
