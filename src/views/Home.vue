@@ -3,20 +3,17 @@
     <div class="display"
       :style="`background-color:#${colorSelected.rgb};`"
       :class="{'color-bright':colorSelected.f === 'b'}">
-      <svg class="share"
-        @click="share(colorSelected.name)"
-        :class="{'fill-bright':colorSelected.f === 'b'}"
-        width="200px"
-        height="200.00px"
-        viewBox="0 0 1024 1024"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg">
-        <path d="M888.921 63.946H131.993c-38.727 0-70.412 31.686-70.412 70.412v756.929c0 38.726 31.685 70.412 70.412 70.412h756.929c38.727 0 70.412-31.686 70.412-70.412V134.358c-0.001-38.725-31.686-70.412-70.413-70.412z m-87.278 811.193c-23.901 2.074-52.149 3.118-79.025 3.118-25.694 0-50.138-0.948-68.357-2.862C501.349 859.356 413.64 771.988 413.64 635.69V341.466c0-42.132 34.15-76.28 76.28-76.28s76.279 34.149 76.279 76.28v65.382h207.046c42.13 0 76.28 34.149 76.28 76.28s-34.15 76.28-76.28 76.28H566.2v76.28c0 28.828 0 77.067 103.986 87.974 24.566 2.576 77.935 2.991 118.251-0.511 42.056-3.479 78.951 27.425 82.596 69.396 3.645 41.973-27.423 78.952-69.39 82.592z" />
-      </svg>
+
+      <ShareButton @click.native="share(colorSelected.name)"
+        class="share" />
       <div>
         <!-- 添加到喜爱颜色 -->
         <!-- 复制hex -->
+        <!-- 随机 -->
       </div>
+      <ShareButton class="share"
+        :fillColor="colorSelected.f"
+        @click.native="share(colorSelected.name)" />
       <ColorSeriesPicker class="series"
         :borderColor="colorSelected.f"
         @colorChange="handleColorChange" />
@@ -49,7 +46,7 @@
       </div>
     </div>
     <div class="tab">
-      <ColorTab class="js-tab-item"
+      <ColorTab class="js-tab-item tab-item"
         v-for="color in colorList"
         @click.native="changeColor(color)"
         :key="color.name"
@@ -65,6 +62,7 @@
 import anime from 'animejs'
 import ColorTab from '@/components/ColorTab.vue'
 import ColorSeriesPicker from '@/components/ColorSeriesPicker.vue'
+import ShareButton from '@/components/ShareButton.vue'
 import colorList from '@/data/color'
 
 export default {
@@ -77,7 +75,8 @@ export default {
   },
   components: {
     ColorTab,
-    ColorSeriesPicker
+    ColorSeriesPicker,
+    ShareButton
   },
   watch: {
     colorList() {
@@ -98,13 +97,6 @@ export default {
     // trigger watch colorList
     this.colorList = colorList
     this.retrieveColorAndSelect(this.$route.query.c)
-    let monji = document.querySelectorAll('.display .kanji,.romaji')
-    anime({
-      targets: monji,
-      opacity: [0, 1],
-      duration: 2500,
-      easing: 'easeOutSine'
-    })
   },
   methods: {
     retrieveColorAndSelect(rgb) {
@@ -153,7 +145,7 @@ export default {
       anime.remove([monji, rgb, cmyk])
       anime({
         targets: monji,
-        translateX: [250, 0],
+        translateX: [150, 0],
         opacity: [0, 1],
         easing: 'easeOutSine'
       })
@@ -179,6 +171,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/mixin.scss';
 .home {
   height: 100%;
   display: flex;
@@ -241,7 +234,7 @@ export default {
       display: flex;
       justify-content: space-around;
     }
-    // 需要等宽字体
+    // mononspace needed
     .cmyk-number {
       font-family: 'MONO';
       font-size: 1.3rem;
@@ -283,9 +276,52 @@ export default {
   }
   .tab {
     flex-shrink: 0;
-    flex-basis: 100px;
+    @include for-phone {
+      flex-basis: 100px;
+    }
+
+    @include for-tablet {
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-start;
+      flex-basis: 400px;
+      flex-wrap: wrap;
+    }
+    @include for-desktop {
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-start;
+      flex-basis: 800px;
+      flex-wrap: wrap;
+    }
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
+
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: url(../assets/64253519_p3.png);
+      background-attachment: local;
+      background-repeat: repeat-y;
+      opacity: 0.3;
+    }
+
+    .tab-item {
+      margin-bottom: 1rem;
+      @include for-phone {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 33%;
+      }
+      @include for-desktop {
+        width: 25%;
+      }
+    }
   }
 }
 .color-bright {
@@ -293,8 +329,5 @@ export default {
 }
 .bg-bright {
   background-color: #fffffb !important;
-}
-.fill-bright {
-  fill: #fffffb !important;
 }
 </style>

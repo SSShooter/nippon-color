@@ -31,23 +31,31 @@ export default {
   height: 2.5rem;
   .color-block {
     height: 100%;
-    width: .5rem;
+    width: 0.5rem;
     margin-right: 0.5rem;
   }
   .monji-block {
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     .kanji {
+      width: 100%;
+      // overflow force text-align center ?
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
       font-size: 1.2rem;
     }
     .rgb {
       font-size: 0.8rem;
     }
   }
-}
-.card + .card {
-  margin-top: 1rem;
 }
 </style>

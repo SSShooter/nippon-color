@@ -9,7 +9,11 @@
 ### v0.9.1
 - Add default page
 - Find color by url query
+- disable user select
 
+### v0.9.2
+- responsive design
+- fonts optimization
 
 ## PWA
 
@@ -17,10 +21,9 @@
 ## TODO
 - favor color
 - click to copy hex
-- responsive design
+- randam color display
 - how to use pwa
 - better scroll experience
-- disable word select
 - hover & active
 
 ## Project setup

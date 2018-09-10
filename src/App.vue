@@ -21,6 +21,5 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #0c0c0c;
-  // background-image: url('./assets/64253519_p3.png')
 }
 </style>
