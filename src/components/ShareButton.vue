@@ -1,5 +1,5 @@
 <template>
-  <svg 
+  <svg
     :class="{'fill-bright':fillColor === 'b'}"
     width="200px"
     height="200.00px"
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props:['fillColor']
+  props: ['fillColor'],
 }
 </script>
 

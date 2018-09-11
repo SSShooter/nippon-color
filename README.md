@@ -25,6 +25,8 @@
 - how to use pwa
 - better scroll experience
 - hover & active
+- optimise font color base on background color manually
+- optimise sort of color manually
 
 ## Project setup
 ```
@@ -56,3 +58,4 @@ npm run test:unit
 
 ### troubleshooting
 - For gh-pages, use relative address in `manifest.json`
+- Use `npm` instead of `cnpm` when HMR not working.[reference](https://github.com/vuejs/vue-cli/issues/1559)

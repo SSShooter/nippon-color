@@ -11,4 +11,9 @@ module.exports = {
       errors: true,
     },
   },
+  chainWebpack: config => {
+    config.resolve
+      .symlinks(true)
+    return config
+  },
 }

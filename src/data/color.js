@@ -9,7 +9,7 @@ export default [
     color: 'NADESHIKO',
     c: 'r',
     f: 'd',
-    Drgb: [220, 159, 180]
+    Drgb: [220, 159, 180],
   },
   {
     name: '紅梅',
@@ -18,7 +18,7 @@ export default [
     color: 'KOHBAI',
     c: 'r',
     f: 'd',
-    Drgb: [225, 107, 140]
+    Drgb: [225, 107, 140],
   },
   {
     name: '蘇芳',
@@ -27,7 +27,7 @@ export default [
     color: 'SUOH',
     c: 'r',
     f: 'b',
-    Drgb: [142, 53, 74]
+    Drgb: [142, 53, 74],
   },
   {
     name: '退紅',
@@ -36,7 +36,7 @@ export default [
     color: 'TAIKOH',
     c: 'r',
     f: 'd',
-    Drgb: [248, 195, 205]
+    Drgb: [248, 195, 205],
   },
   {
     name: '一斥染',
@@ -45,7 +45,7 @@ export default [
     color: 'IKKONZOME',
     c: 'r',
     f: 'd',
-    Drgb: [244, 167, 185]
+    Drgb: [244, 167, 185],
   },
   {
     name: '桑染',
@@ -54,7 +54,7 @@ export default [
     color: 'KUWAZOME',
     c: 'r',
     f: 'b',
-    Drgb: [100, 54, 60]
+    Drgb: [100, 54, 60],
   },
   {
     name: '桃',
@@ -63,7 +63,7 @@ export default [
     color: 'MOMO',
     c: 'r',
     f: 'd',
-    Drgb: [245, 150, 170]
+    Drgb: [245, 150, 170],
   },
   {
     name: '苺',
@@ -72,7 +72,7 @@ export default [
     color: 'ICHIGO',
     c: 'r',
     f: 'b',
-    Drgb: [181, 73, 91]
+    Drgb: [181, 73, 91],
   },
   {
     name: '薄紅',
@@ -81,7 +81,7 @@ export default [
     color: 'USUBENI',
     c: 'r',
     f: 'd',
-    Drgb: [232, 122, 144]
+    Drgb: [232, 122, 144],
   },
   {
     name: '今様',
@@ -90,7 +90,7 @@ export default [
     color: 'IMAYOH',
     c: 'r',
     f: 'd',
-    Drgb: [208, 90, 110]
+    Drgb: [208, 90, 110],
   },
   {
     name: '中紅',
@@ -99,7 +99,7 @@ export default [
     color: 'NAKABENI',
     c: 'r',
     f: 'd',
-    Drgb: [219, 77, 109]
+    Drgb: [219, 77, 109],
   },
   {
     name: '桜',
@@ -108,7 +108,7 @@ export default [
     color: 'SAKURA',
     c: 'w',
     f: 'd',
-    Drgb: [254, 223, 225]
+    Drgb: [254, 223, 225],
   },
   {
     name: '梅鼠',
@@ -117,7 +117,7 @@ export default [
     color: 'UMENEZUMI',
     c: 'r',
     f: 'd',
-    Drgb: [158, 122, 122]
+    Drgb: [158, 122, 122],
   },
   {
     name: '韓紅花',
@@ -126,7 +126,7 @@ export default [
     color: 'KARAKURENAI',
     c: 'r',
     f: 'b',
-    Drgb: [208, 16, 76]
+    Drgb: [208, 16, 76],
   },
   {
     name: '燕脂',
@@ -135,7 +135,7 @@ export default [
     color: 'ENJI',
     c: 'r',
     f: 'b',
-    Drgb: [159, 53, 58]
+    Drgb: [159, 53, 58],
   },
   {
     name: '紅',
@@ -144,7 +144,7 @@ export default [
     color: 'KURENAI',
     c: 'r',
     f: 'b',
-    Drgb: [203, 27, 69]
+    Drgb: [203, 27, 69],
   },
   {
     name: '鴇',
@@ -153,7 +153,7 @@ export default [
     color: 'TOKI',
     c: 'r',
     f: 'd',
-    Drgb: [238, 169, 169]
+    Drgb: [238, 169, 169],
   },
   {
     name: '長春',
@@ -162,7 +162,7 @@ export default [
     color: 'CYOHSYUN',
     c: 'r',
     f: 'd',
-    Drgb: [191, 103, 102]
+    Drgb: [191, 103, 102],
   },
   {
     name: '深緋',
@@ -171,7 +171,7 @@ export default [
     color: 'KOKIAKE',
     c: 'r',
     f: 'b',
-    Drgb: [134, 71, 63]
+    Drgb: [134, 71, 63],
   },
   {
     name: '桜鼠',
@@ -180,7 +180,7 @@ export default [
     color: 'SAKURANEZUMI',
     c: 'r',
     f: 'd',
-    Drgb: [177, 150, 147]
+    Drgb: [177, 150, 147],
   },
   {
     name: '甚三紅',
@@ -189,7 +189,7 @@ export default [
     color: 'JINZAMOMI',
     c: 'r',
     f: 'd',
-    Drgb: [235, 122, 119]
+    Drgb: [235, 122, 119],
   },
   {
     name: '小豆',
@@ -198,7 +198,7 @@ export default [
     color: 'AZUKI',
     c: 'r',
     f: 'b',
-    Drgb: [149, 74, 69]
+    Drgb: [149, 74, 69],
   },
   {
     name: '蘇芳香',
@@ -207,7 +207,7 @@ export default [
     color: 'SUOHKOH',
     c: 'r',
     f: 'b',
-    Drgb: [169, 99, 96]
+    Drgb: [169, 99, 96],
   },
   {
     name: '赤紅',
@@ -216,7 +216,7 @@ export default [
     color: 'AKABENI',
     c: 'r',
     f: 'b',
-    Drgb: [203, 64, 66]
+    Drgb: [203, 64, 66],
   },
   {
     name: '真朱',
@@ -225,7 +225,7 @@ export default [
     color: 'SHINSYU',
     c: 'r',
     f: 'b',
-    Drgb: [171, 59, 58]
+    Drgb: [171, 59, 58],
   },
   {
     name: '灰桜',
@@ -234,7 +234,7 @@ export default [
     color: 'HAIZAKURA',
     c: 'r',
     f: 'd',
-    Drgb: [215, 196, 187]
+    Drgb: [215, 196, 187],
   },
   {
     name: '栗梅',
@@ -243,7 +243,7 @@ export default [
     color: 'KURIUME',
     c: 'r',
     f: 'b',
-    Drgb: [144, 72, 64]
+    Drgb: [144, 72, 64],
   },
   {
     name: '海老茶',
@@ -252,7 +252,7 @@ export default [
     color: 'EBICHA',
     c: 'r',
     f: 'b',
-    Drgb: [115, 67, 56]
+    Drgb: [115, 67, 56],
   },
   {
     name: '銀朱',
@@ -261,7 +261,7 @@ export default [
     color: 'GINSYU',
     c: 'r',
     f: 'b',
-    Drgb: [199, 62, 58]
+    Drgb: [199, 62, 58],
   },
   {
     name: '黒鳶',
@@ -270,7 +270,7 @@ export default [
     color: 'KUROTOBI',
     c: 'r',
     f: 'b',
-    Drgb: [85, 66, 54]
+    Drgb: [85, 66, 54],
   },
   {
     name: '紅鳶',
@@ -279,7 +279,7 @@ export default [
     color: 'BENITOBI',
     c: 'r',
     f: 'b',
-    Drgb: [153, 70, 57]
+    Drgb: [153, 70, 57],
   },
   {
     name: '曙',
@@ -288,7 +288,7 @@ export default [
     color: 'AKEBONO',
     c: 'r',
     f: 'd',
-    Drgb: [241, 148, 131]
+    Drgb: [241, 148, 131],
   },
   {
     name: '紅樺',
@@ -297,7 +297,7 @@ export default [
     color: 'BENIKABA',
     c: 'r',
     f: 'b',
-    Drgb: [181, 68, 52]
+    Drgb: [181, 68, 52],
   },
   {
     name: '水がき',
@@ -306,7 +306,7 @@ export default [
     color: 'MIZUGAKI',
     c: 'r',
     f: 'd',
-    Drgb: [185, 136, 125]
+    Drgb: [185, 136, 125],
   },
   {
     name: '珊瑚朱',
@@ -315,7 +315,7 @@ export default [
     color: 'SANGOSYU',
     c: 'r',
     f: 'd',
-    Drgb: [241, 124, 103]
+    Drgb: [241, 124, 103],
   },
   {
     name: '紅檜皮',
@@ -324,7 +324,7 @@ export default [
     color: 'BENIHIWADA',
     c: 'r',
     f: 'b',
-    Drgb: [136, 76, 58]
+    Drgb: [136, 76, 58],
   },
   {
     name: '猩猩緋',
@@ -333,7 +333,7 @@ export default [
     color: 'SYOJYOHI',
     c: 'r',
     f: 'b',
-    Drgb: [232, 48, 21]
+    Drgb: [232, 48, 21],
   },
   {
     name: '鉛丹',
@@ -342,7 +342,7 @@ export default [
     color: 'ENTAN',
     c: 'r',
     f: 'd',
-    Drgb: [215, 84, 85]
+    Drgb: [215, 84, 85],
   },
   {
     name: '芝翫茶',
@@ -351,7 +351,7 @@ export default [
     color: 'SHIKANCHA',
     c: 'r',
     f: 'b',
-    Drgb: [181, 93, 76]
+    Drgb: [181, 93, 76],
   },
   {
     name: '檜皮',
@@ -360,7 +360,7 @@ export default [
     color: 'HIWADA',
     c: 'r',
     f: 'b',
-    Drgb: [133, 72, 54]
+    Drgb: [133, 72, 54],
   },
   {
     name: '柿渋',
@@ -369,7 +369,7 @@ export default [
     color: 'KAKISHIBU',
     c: 'r',
     f: 'b',
-    Drgb: [163, 94, 71]
+    Drgb: [163, 94, 71],
   },
   {
     name: '緋',
@@ -378,7 +378,7 @@ export default [
     color: 'AKE',
     c: 'r',
     f: 'b',
-    Drgb: [204, 84, 58]
+    Drgb: [204, 84, 58],
   },
   {
     name: '鳶',
@@ -387,7 +387,7 @@ export default [
     color: 'TOBI',
     c: 'r',
     f: 'b',
-    Drgb: [114, 72, 50]
+    Drgb: [114, 72, 50],
   },
   {
     name: '紅緋',
@@ -396,7 +396,7 @@ export default [
     color: 'BENIHI',
     c: 'r',
     f: 'd',
-    Drgb: [247, 92, 47]
+    Drgb: [247, 92, 47],
   },
   {
     name: '栗皮茶',
@@ -405,7 +405,7 @@ export default [
     color: 'KURIKAWACHA',
     c: 'r',
     f: 'b',
-    Drgb: [106, 64, 40]
+    Drgb: [106, 64, 40],
   },
   {
     name: '弁柄',
@@ -414,7 +414,7 @@ export default [
     color: 'BENGARA',
     c: 'r',
     f: 'b',
-    Drgb: [154, 80, 52]
+    Drgb: [154, 80, 52],
   },
   {
     name: '照柿',
@@ -423,7 +423,7 @@ export default [
     color: 'TERIGAKI',
     c: 'r',
     f: 'b',
-    Drgb: [196, 98, 67]
+    Drgb: [196, 98, 67],
   },
   {
     name: '江戸茶',
@@ -432,7 +432,7 @@ export default [
     color: 'EDOCHA',
     c: 'r',
     f: 'b',
-    Drgb: [175, 95, 60]
+    Drgb: [175, 95, 60],
   },
   {
     name: '洗朱',
@@ -441,7 +441,7 @@ export default [
     color: 'ARAISYU',
     c: 'r',
     f: 'd',
-    Drgb: [251, 150, 110]
+    Drgb: [251, 150, 110],
   },
   {
     name: '百塩茶',
@@ -450,7 +450,7 @@ export default [
     color: 'MOMOSHIOCHA',
     c: 'r',
     f: 'b',
-    Drgb: [114, 73, 56]
+    Drgb: [114, 73, 56],
   },
   {
     name: '唐茶',
@@ -459,7 +459,7 @@ export default [
     color: 'KARACHA',
     c: 'r',
     f: 'b',
-    Drgb: [180, 113, 87]
+    Drgb: [180, 113, 87],
   },
   {
     name: 'ときがら茶',
@@ -468,7 +468,7 @@ export default [
     color: 'TOKIGARACHA',
     c: 'r',
     f: 'd',
-    Drgb: [219, 142, 113]
+    Drgb: [219, 142, 113],
   },
   {
     name: '黄丹',
@@ -477,7 +477,7 @@ export default [
     color: 'OHNI',
     c: 'r',
     f: 'b',
-    Drgb: [240, 94, 28]
+    Drgb: [240, 94, 28],
   },
   {
     name: '纁',
@@ -486,7 +486,7 @@ export default [
     color: 'SOHI',
     c: 'r',
     f: 'd',
-    Drgb: [237, 120, 74]
+    Drgb: [237, 120, 74],
   },
   {
     name: '遠州茶',
@@ -495,7 +495,7 @@ export default [
     color: 'ENSYUCHA',
     c: 'r',
     f: 'd',
-    Drgb: [202, 120, 83]
+    Drgb: [202, 120, 83],
   },
   {
     name: '樺茶',
@@ -504,7 +504,7 @@ export default [
     color: 'KABACHA',
     c: 'r',
     f: 'b',
-    Drgb: [179, 92, 55]
+    Drgb: [179, 92, 55],
   },
   {
     name: '焦茶',
@@ -513,7 +513,7 @@ export default [
     color: 'KOGECHA',
     c: 'r',
     f: 'b',
-    Drgb: [86, 63, 46]
+    Drgb: [86, 63, 46],
   },
   {
     name: '赤香',
@@ -522,7 +522,7 @@ export default [
     color: 'AKAKOH',
     c: 'r',
     f: 'd',
-    Drgb: [227, 145, 110]
+    Drgb: [227, 145, 110],
   },
   {
     name: '雀茶',
@@ -531,7 +531,7 @@ export default [
     color: 'SUZUMECHA',
     c: 'r',
     f: 'b',
-    Drgb: [143, 90, 60]
+    Drgb: [143, 90, 60],
   },
   {
     name: '宍',
@@ -540,7 +540,7 @@ export default [
     color: 'SHISHI',
     c: 'r',
     f: 'd',
-    Drgb: [240, 169, 134]
+    Drgb: [240, 169, 134],
   },
   {
     name: '宗伝唐茶',
@@ -549,7 +549,7 @@ export default [
     color: 'SODENKARACHA',
     c: 'r',
     f: 'b',
-    Drgb: [160, 103, 75]
+    Drgb: [160, 103, 75],
   },
   {
     name: '樺',
@@ -558,7 +558,7 @@ export default [
     color: 'KABA',
     c: 'r',
     f: 'b',
-    Drgb: [193, 105, 60]
+    Drgb: [193, 105, 60],
   },
   {
     name: '深支子',
@@ -567,7 +567,7 @@ export default [
     color: 'KOKIKUCHINASHI',
     c: 'r',
     f: 'd',
-    Drgb: [251, 153, 102]
+    Drgb: [251, 153, 102],
   },
   {
     name: '胡桃',
@@ -576,7 +576,7 @@ export default [
     color: 'KURUMI',
     c: 'r',
     f: 'b',
-    Drgb: [148, 122, 109]
+    Drgb: [148, 122, 109],
   },
   {
     name: '代赭',
@@ -585,7 +585,7 @@ export default [
     color: 'TAISYA',
     c: 'r',
     f: 'b',
-    Drgb: [163, 99, 54]
+    Drgb: [163, 99, 54],
   },
   {
     name: '洗柿',
@@ -594,7 +594,7 @@ export default [
     color: 'ARAIGAKI',
     c: 'r',
     f: 'd',
-    Drgb: [231, 148, 96]
+    Drgb: [231, 148, 96],
   },
   {
     name: '黄櫨染',
@@ -603,7 +603,7 @@ export default [
     color: 'KOHROZEN',
     c: 'r',
     f: 'b',
-    Drgb: [125, 83, 44]
+    Drgb: [125, 83, 44],
   },
   {
     name: '赤朽葉',
@@ -612,7 +612,7 @@ export default [
     color: 'AKAKUCHIBA',
     c: 'r',
     f: 'd',
-    Drgb: [199, 133, 80]
+    Drgb: [199, 133, 80],
   },
   {
     name: '礪茶',
@@ -621,7 +621,7 @@ export default [
     color: 'TONOCHA',
     c: 'r',
     f: 'b',
-    Drgb: [152, 95, 42]
+    Drgb: [152, 95, 42],
   },
   {
     name: '赤白橡',
@@ -630,7 +630,7 @@ export default [
     color: 'AKASHIROTSURUBAMI',
     c: 'r',
     f: 'd',
-    Drgb: [225, 166, 121]
+    Drgb: [225, 166, 121],
   },
   {
     name: '煎茶',
@@ -639,7 +639,7 @@ export default [
     color: 'SENCHA',
     c: 'r',
     f: 'b',
-    Drgb: [133, 91, 50]
+    Drgb: [133, 91, 50],
   },
   {
     name: '萱草',
@@ -648,7 +648,7 @@ export default [
     color: 'KANZO',
     c: 'r',
     f: 'd',
-    Drgb: [252, 159, 77]
+    Drgb: [252, 159, 77],
   },
   {
     name: '洒落柿',
@@ -657,7 +657,7 @@ export default [
     color: 'SHAREGAKI',
     c: 'r',
     f: 'd',
-    Drgb: [255, 186, 132]
+    Drgb: [255, 186, 132],
   },
   {
     name: '紅鬱金',
@@ -666,7 +666,7 @@ export default [
     color: 'BENIUKON',
     c: 'y',
     f: 'd',
-    Drgb: [233, 139, 42]
+    Drgb: [233, 139, 42],
   },
   {
     name: '梅染',
@@ -675,7 +675,7 @@ export default [
     color: 'UMEZOME',
     c: 'r',
     f: 'd',
-    Drgb: [233, 163, 104]
+    Drgb: [233, 163, 104],
   },
   {
     name: '枇杷茶',
@@ -684,7 +684,7 @@ export default [
     color: 'BIWACHA',
     c: 'r',
     f: 'b',
-    Drgb: [177, 120, 68]
+    Drgb: [177, 120, 68],
   },
   {
     name: '丁子茶',
@@ -693,7 +693,7 @@ export default [
     color: 'CHOJICHA',
     c: 'y',
     f: 'b',
-    Drgb: [150, 99, 46]
+    Drgb: [150, 99, 46],
   },
   {
     name: '憲法染',
@@ -702,7 +702,7 @@ export default [
     color: 'KENPOHZOME',
     c: 'y',
     f: 'b',
-    Drgb: [67, 52, 27]
+    Drgb: [67, 52, 27],
   },
   {
     name: '琥珀',
@@ -711,7 +711,7 @@ export default [
     color: 'KOHAKU',
     c: 'r',
     f: 'b',
-    Drgb: [202, 122, 44]
+    Drgb: [202, 122, 44],
   },
   {
     name: '薄柿',
@@ -720,7 +720,7 @@ export default [
     color: 'USUGAKI',
     c: 'r',
     f: 'd',
-    Drgb: [236, 184, 138]
+    Drgb: [236, 184, 138],
   },
   {
     name: '伽羅',
@@ -729,7 +729,7 @@ export default [
     color: 'KYARA',
     c: 'y',
     f: 'b',
-    Drgb: [120, 85, 43]
+    Drgb: [120, 85, 43],
   },
   {
     name: '丁子染',
@@ -738,7 +738,7 @@ export default [
     color: 'CHOJIZOME',
     c: 'y',
     f: 'b',
-    Drgb: [176, 119, 54]
+    Drgb: [176, 119, 54],
   },
   {
     name: '柴染',
@@ -747,7 +747,7 @@ export default [
     color: 'FUSHIZOME',
     c: 'y',
     f: 'b',
-    Drgb: [150, 114, 73]
+    Drgb: [150, 114, 73],
   },
   {
     name: '朽葉',
@@ -756,7 +756,7 @@ export default [
     color: 'KUCHIBA',
     c: 'y',
     f: 'd',
-    Drgb: [226, 148, 59]
+    Drgb: [226, 148, 59],
   },
   {
     name: '金茶',
@@ -765,7 +765,7 @@ export default [
     color: 'KINCHA',
     c: 'y',
     f: 'b',
-    Drgb: [199, 128, 45]
+    Drgb: [199, 128, 45],
   },
   {
     name: '狐',
@@ -774,7 +774,7 @@ export default [
     color: 'KITSUNE',
     c: 'y',
     f: 'b',
-    Drgb: [155, 110, 35]
+    Drgb: [155, 110, 35],
   },
   {
     name: '煤竹',
@@ -783,7 +783,7 @@ export default [
     color: 'SUSUTAKE',
     c: 'y',
     f: 'b',
-    Drgb: [110, 85, 47]
+    Drgb: [110, 85, 47],
   },
   {
     name: '薄香',
@@ -792,7 +792,7 @@ export default [
     color: 'USUKOH',
     c: 'y',
     f: 'd',
-    Drgb: [235, 180, 113]
+    Drgb: [235, 180, 113],
   },
   {
     name: '砥粉',
@@ -801,7 +801,7 @@ export default [
     color: 'TONOKO',
     c: 'y',
     f: 'd',
-    Drgb: [215, 185, 142]
+    Drgb: [215, 185, 142],
   },
   {
     name: '銀煤竹',
@@ -810,7 +810,7 @@ export default [
     color: 'GINSUSUTAKE',
     c: 'y',
     f: 'b',
-    Drgb: [130, 102, 58]
+    Drgb: [130, 102, 58],
   },
   {
     name: '黄土',
@@ -819,7 +819,7 @@ export default [
     color: 'OHDO',
     c: 'y',
     f: 'd',
-    Drgb: [182, 142, 85]
+    Drgb: [182, 142, 85],
   },
   {
     name: '白茶',
@@ -828,7 +828,7 @@ export default [
     color: 'SHIRACHA',
     c: 'y',
     f: 'd',
-    Drgb: [188, 159, 119]
+    Drgb: [188, 159, 119],
   },
   {
     name: '媚茶',
@@ -837,7 +837,7 @@ export default [
     color: 'KOBICHA',
     c: 'y',
     f: 'b',
-    Drgb: [135, 102, 51]
+    Drgb: [135, 102, 51],
   },
   {
     name: '黄唐茶',
@@ -846,7 +846,7 @@ export default [
     color: 'KIGARACHA',
     c: 'y',
     f: 'b',
-    Drgb: [193, 138, 38]
+    Drgb: [193, 138, 38],
   },
   {
     name: '山吹',
@@ -855,7 +855,7 @@ export default [
     color: 'YAMABUKI',
     c: 'y',
     f: 'd',
-    Drgb: [255, 177, 27]
+    Drgb: [255, 177, 27],
   },
   {
     name: '山吹茶',
@@ -864,7 +864,7 @@ export default [
     color: 'YAMABUKICHA',
     c: 'y',
     f: 'd',
-    Drgb: [209, 152, 38]
+    Drgb: [209, 152, 38],
   },
   {
     name: '櫨染',
@@ -873,7 +873,7 @@ export default [
     color: 'HAJIZOME',
     c: 'y',
     f: 'd',
-    Drgb: [221, 165, 45]
+    Drgb: [221, 165, 45],
   },
   {
     name: '桑茶',
@@ -882,7 +882,7 @@ export default [
     color: 'KUWACHA',
     c: 'y',
     f: 'd',
-    Drgb: [201, 152, 51]
+    Drgb: [201, 152, 51],
   },
   {
     name: '玉子',
@@ -891,7 +891,7 @@ export default [
     color: 'TAMAGO',
     c: 'y',
     f: 'd',
-    Drgb: [249, 191, 69]
+    Drgb: [249, 191, 69],
   },
   {
     name: '白橡',
@@ -900,7 +900,7 @@ export default [
     color: 'SHIROTSURUBAMI',
     c: 'y',
     f: 'd',
-    Drgb: [220, 184, 121]
+    Drgb: [220, 184, 121],
   },
   {
     name: '黄橡',
@@ -909,7 +909,7 @@ export default [
     color: 'KITSURUBAMI',
     c: 'y',
     f: 'b',
-    Drgb: [186, 145, 50]
+    Drgb: [186, 145, 50],
   },
   {
     name: '玉蜀黍',
@@ -918,7 +918,7 @@ export default [
     color: 'TAMAMOROKOSHI',
     c: 'y',
     f: 'd',
-    Drgb: [232, 182, 71]
+    Drgb: [232, 182, 71],
   },
   {
     name: '花葉',
@@ -927,7 +927,7 @@ export default [
     color: 'HANABA',
     c: 'y',
     f: 'd',
-    Drgb: [247, 194, 66]
+    Drgb: [247, 194, 66],
   },
   {
     name: '生壁',
@@ -936,7 +936,7 @@ export default [
     color: 'NAMAKABE',
     c: 'y',
     f: 'b',
-    Drgb: [125, 108, 70]
+    Drgb: [125, 108, 70],
   },
   {
     name: '鳥の子',
@@ -945,7 +945,7 @@ export default [
     color: 'TORINOKO',
     c: 'y',
     f: 'd',
-    Drgb: [218, 201, 166]
+    Drgb: [218, 201, 166],
   },
   {
     name: '浅黄',
@@ -954,7 +954,7 @@ export default [
     color: 'USUKI',
     c: 'y',
     f: 'd',
-    Drgb: [250, 214, 137]
+    Drgb: [250, 214, 137],
   },
   {
     name: '黄朽葉',
@@ -963,7 +963,7 @@ export default [
     color: 'KIKUCHIBA',
     c: 'y',
     f: 'd',
-    Drgb: [217, 171, 66]
+    Drgb: [217, 171, 66],
   },
   {
     name: '梔子',
@@ -972,7 +972,7 @@ export default [
     color: 'KUCHINASHI',
     c: 'y',
     f: 'd',
-    Drgb: [246, 197, 85]
+    Drgb: [246, 197, 85],
   },
   {
     name: '籐黄',
@@ -981,7 +981,7 @@ export default [
     color: 'TOHOH',
     c: 'y',
     f: 'd',
-    Drgb: [255, 196, 8]
+    Drgb: [255, 196, 8],
   },
   {
     name: '鬱金',
@@ -990,7 +990,7 @@ export default [
     color: 'UKON',
     c: 'y',
     f: 'd',
-    Drgb: [239, 187, 36]
+    Drgb: [239, 187, 36],
   },
   {
     name: '芥子',
@@ -999,7 +999,7 @@ export default [
     color: 'KARASHI',
     c: 'y',
     f: 'd',
-    Drgb: [202, 173, 95]
+    Drgb: [202, 173, 95],
   },
   {
     name: '肥後煤竹',
@@ -1008,7 +1008,7 @@ export default [
     color: 'HIGOSUSUTAKE',
     c: 'y',
     f: 'b',
-    Drgb: [141, 116, 42]
+    Drgb: [141, 116, 42],
   },
   {
     name: '利休白茶',
@@ -1017,7 +1017,7 @@ export default [
     color: 'RIKYUSHIRACHA',
     c: 'y',
     f: 'd',
-    Drgb: [180, 165, 130]
+    Drgb: [180, 165, 130],
   },
   {
     name: '灰汁',
@@ -1026,7 +1026,7 @@ export default [
     color: 'AKU',
     c: 'y',
     f: 'b',
-    Drgb: [135, 127, 108]
+    Drgb: [135, 127, 108],
   },
   {
     name: '利休茶',
@@ -1035,7 +1035,7 @@ export default [
     color: 'RIKYUCHA',
     c: 'y',
     f: 'b',
-    Drgb: [137, 125, 85]
+    Drgb: [137, 125, 85],
   },
   {
     name: '路考茶',
@@ -1044,7 +1044,7 @@ export default [
     color: 'ROKOHCHA',
     c: 'y',
     f: 'b',
-    Drgb: [116, 103, 62]
+    Drgb: [116, 103, 62],
   },
   {
     name: '菜種油',
@@ -1053,7 +1053,7 @@ export default [
     color: 'NATANEYU',
     c: 'y',
     f: 'b',
-    Drgb: [162, 140, 55]
+    Drgb: [162, 140, 55],
   },
   {
     name: '鶯茶',
@@ -1062,7 +1062,7 @@ export default [
     color: 'UGUISUCHA',
     c: 'y',
     f: 'b',
-    Drgb: [108, 96, 36]
+    Drgb: [108, 96, 36],
   },
   {
     name: '黄海松茶',
@@ -1071,7 +1071,7 @@ export default [
     color: 'KIMIRUCHA',
     c: 'y',
     f: 'b',
-    Drgb: [134, 120, 53]
+    Drgb: [134, 120, 53],
   },
   {
     name: '海松茶',
@@ -1080,7 +1080,7 @@ export default [
     color: 'MIRUCHA',
     c: 'y',
     f: 'b',
-    Drgb: [98, 89, 44]
+    Drgb: [98, 89, 44],
   },
   {
     name: '刈安',
@@ -1089,7 +1089,7 @@ export default [
     color: 'KARIYASU',
     c: 'y',
     f: 'd',
-    Drgb: [233, 205, 76]
+    Drgb: [233, 205, 76],
   },
   {
     name: '菜の花',
@@ -1098,7 +1098,7 @@ export default [
     color: 'NANOHANA',
     c: 'y',
     f: 'd',
-    Drgb: [247, 217, 76]
+    Drgb: [247, 217, 76],
   },
   {
     name: '黄蘗',
@@ -1107,7 +1107,7 @@ export default [
     color: 'KIHADA',
     c: 'y',
     f: 'd',
-    Drgb: [251, 226, 81]
+    Drgb: [251, 226, 81],
   },
   {
     name: '蒸栗',
@@ -1116,7 +1116,7 @@ export default [
     color: 'MUSHIKURI',
     c: 'y',
     f: 'd',
-    Drgb: [217, 205, 144]
+    Drgb: [217, 205, 144],
   },
   {
     name: '青朽葉',
@@ -1125,7 +1125,7 @@ export default [
     color: 'AOKUCHIBA',
     c: 'y',
     f: 'd',
-    Drgb: [173, 161, 66]
+    Drgb: [173, 161, 66],
   },
   {
     name: '女郎花',
@@ -1134,7 +1134,7 @@ export default [
     color: 'OMINAESHI',
     c: 'y',
     f: 'd',
-    Drgb: [221, 210, 59]
+    Drgb: [221, 210, 59],
   },
   {
     name: '鶸茶',
@@ -1143,7 +1143,7 @@ export default [
     color: 'HIWACHA',
     c: 'y',
     f: 'd',
-    Drgb: [165, 160, 81]
+    Drgb: [165, 160, 81],
   },
   {
     name: '鶸',
@@ -1152,7 +1152,7 @@ export default [
     color: 'HIWA',
     c: 'y',
     f: 'd',
-    Drgb: [190, 194, 63]
+    Drgb: [190, 194, 63],
   },
   {
     name: '鶯',
@@ -1161,7 +1161,7 @@ export default [
     color: 'UGUISU',
     c: 'y',
     f: 'b',
-    Drgb: [108, 106, 45]
+    Drgb: [108, 106, 45],
   },
   {
     name: '柳茶',
@@ -1170,7 +1170,7 @@ export default [
     color: 'YANAGICHA',
     c: 'y',
     f: 'b',
-    Drgb: [147, 150, 80]
+    Drgb: [147, 150, 80],
   },
   {
     name: '苔',
@@ -1179,7 +1179,7 @@ export default [
     color: 'KOKE',
     c: 'y',
     f: 'b',
-    Drgb: [131, 138, 45]
+    Drgb: [131, 138, 45],
   },
   {
     name: '麹塵',
@@ -1188,7 +1188,7 @@ export default [
     color: 'KIKUJIN',
     c: 'y',
     f: 'd',
-    Drgb: [177, 180, 121]
+    Drgb: [177, 180, 121],
   },
   {
     name: '璃寛茶',
@@ -1197,7 +1197,7 @@ export default [
     color: 'RIKANCHA',
     c: 'y',
     f: 'b',
-    Drgb: [97, 97, 56]
+    Drgb: [97, 97, 56],
   },
   {
     name: '藍媚茶',
@@ -1206,7 +1206,7 @@ export default [
     color: 'AIKOBICHA',
     c: 'y',
     f: 'b',
-    Drgb: [75, 78, 42]
+    Drgb: [75, 78, 42],
   },
   {
     name: '海松',
@@ -1215,7 +1215,7 @@ export default [
     color: 'MIRU',
     c: 'y',
     f: 'b',
-    Drgb: [91, 98, 46]
+    Drgb: [91, 98, 46],
   },
   {
     name: '千歳茶',
@@ -1224,7 +1224,7 @@ export default [
     color: 'SENSAICHA',
     c: 'y',
     f: 'b',
-    Drgb: [77, 81, 57]
+    Drgb: [77, 81, 57],
   },
   {
     name: '梅幸茶',
@@ -1233,7 +1233,7 @@ export default [
     color: 'BAIKOCHA',
     c: 'y',
     f: 'd',
-    Drgb: [137, 145, 107]
+    Drgb: [137, 145, 107],
   },
   {
     name: '鶸萌黄',
@@ -1242,7 +1242,7 @@ export default [
     color: 'HIWAMOEGI',
     c: 'y',
     f: 'd',
-    Drgb: [144, 180, 75]
+    Drgb: [144, 180, 75],
   },
   {
     name: '柳染',
@@ -1251,7 +1251,7 @@ export default [
     color: 'YANAGIZOME',
     c: 'y',
     f: 'd',
-    Drgb: [145, 173, 112]
+    Drgb: [145, 173, 112],
   },
   {
     name: '裏柳',
@@ -1260,7 +1260,7 @@ export default [
     color: 'URAYANAGI',
     c: 'y',
     f: 'd',
-    Drgb: [181, 202, 160]
+    Drgb: [181, 202, 160],
   },
   {
     name: '岩井茶',
@@ -1269,7 +1269,7 @@ export default [
     color: 'IWAICHA',
     c: 'y',
     f: 'b',
-    Drgb: [100, 106, 88]
+    Drgb: [100, 106, 88],
   },
   {
     name: '萌黄',
@@ -1278,7 +1278,7 @@ export default [
     color: 'MOEGI',
     c: 'y',
     f: 'b',
-    Drgb: [123, 162, 63]
+    Drgb: [123, 162, 63],
   },
   {
     name: '苗',
@@ -1287,7 +1287,7 @@ export default [
     color: 'NAE',
     c: 'g',
     f: 'd',
-    Drgb: [134, 193, 102]
+    Drgb: [134, 193, 102],
   },
   {
     name: '柳煤竹',
@@ -1296,7 +1296,7 @@ export default [
     color: 'YANAGISUSUTAKE',
     c: 'g',
     f: 'b',
-    Drgb: [74, 89, 61]
+    Drgb: [74, 89, 61],
   },
   {
     name: '松葉',
@@ -1305,7 +1305,7 @@ export default [
     color: 'MATSUBA',
     c: 'g',
     f: 'b',
-    Drgb: [66, 96, 45]
+    Drgb: [66, 96, 45],
   },
   {
     name: '青丹',
@@ -1314,7 +1314,7 @@ export default [
     color: 'AONI',
     c: 'g',
     f: 'b',
-    Drgb: [81, 110, 65]
+    Drgb: [81, 110, 65],
   },
   {
     name: '薄青',
@@ -1323,7 +1323,7 @@ export default [
     color: 'USUAO',
     c: 'g',
     f: 'd',
-    Drgb: [145, 180, 147]
+    Drgb: [145, 180, 147],
   },
   {
     name: '柳鼠',
@@ -1332,7 +1332,7 @@ export default [
     color: 'YANAGINEZUMI',
     c: 'g',
     f: 'd',
-    Drgb: [128, 143, 124]
+    Drgb: [128, 143, 124],
   },
   {
     name: '常磐',
@@ -1341,7 +1341,7 @@ export default [
     color: 'TOKIWA',
     c: 'g',
     f: 'b',
-    Drgb: [27, 129, 62]
+    Drgb: [27, 129, 62],
   },
   {
     name: '若竹',
@@ -1350,7 +1350,7 @@ export default [
     color: 'WAKATAKE',
     c: 'g',
     f: 'd',
-    Drgb: [93, 172, 129]
+    Drgb: [93, 172, 129],
   },
   {
     name: '千歳緑',
@@ -1359,7 +1359,7 @@ export default [
     color: 'CHITOSEMIDORI',
     c: 'g',
     f: 'b',
-    Drgb: [54, 86, 60]
+    Drgb: [54, 86, 60],
   },
   {
     name: '緑',
@@ -1368,7 +1368,7 @@ export default [
     color: 'MIDORI',
     c: 'c',
     f: 'b',
-    Drgb: [34, 125, 81]
+    Drgb: [34, 125, 81],
   },
   {
     name: '白緑',
@@ -1377,7 +1377,7 @@ export default [
     color: 'BYAKUROKU',
     c: 'g',
     f: 'd',
-    Drgb: [168, 216, 185]
+    Drgb: [168, 216, 185],
   },
   {
     name: '老竹',
@@ -1386,7 +1386,7 @@ export default [
     color: 'OITAKE',
     c: 'g',
     f: 'b',
-    Drgb: [106, 131, 114]
+    Drgb: [106, 131, 114],
   },
   {
     name: '木賊',
@@ -1395,7 +1395,7 @@ export default [
     color: 'TOKUSA',
     c: 'g',
     f: 'b',
-    Drgb: [45, 109, 75]
+    Drgb: [45, 109, 75],
   },
   {
     name: '御納戸茶',
@@ -1404,7 +1404,7 @@ export default [
     color: 'ONANDOCHA',
     c: 'g',
     f: 'b',
-    Drgb: [70, 93, 76]
+    Drgb: [70, 93, 76],
   },
   {
     name: '緑青',
@@ -1413,7 +1413,7 @@ export default [
     color: 'ROKUSYOH',
     c: 'c',
     f: 'b',
-    Drgb: [36, 147, 110]
+    Drgb: [36, 147, 110],
   },
   {
     name: '錆青磁',
@@ -1422,7 +1422,7 @@ export default [
     color: 'SABISEIJI',
     c: 'c',
     f: 'd',
-    Drgb: [134, 166, 151]
+    Drgb: [134, 166, 151],
   },
   {
     name: '青竹',
@@ -1431,7 +1431,7 @@ export default [
     color: 'AOTAKE',
     c: 'c',
     f: 'b',
-    Drgb: [0, 137, 108]
+    Drgb: [0, 137, 108],
   },
   {
     name: 'ビロード',
@@ -1440,7 +1440,7 @@ export default [
     color: 'VELUDO',
     c: 'c',
     f: 'b',
-    Drgb: [9, 97, 72]
+    Drgb: [9, 97, 72],
   },
   {
     name: '虫襖',
@@ -1449,7 +1449,7 @@ export default [
     color: 'MUSHIAO',
     c: 'c',
     f: 'b',
-    Drgb: [32, 96, 79]
+    Drgb: [32, 96, 79],
   },
   {
     name: '藍海松茶',
@@ -1458,7 +1458,7 @@ export default [
     color: 'AIMIRUCHA',
     c: 'c',
     f: 'b',
-    Drgb: [15, 76, 58]
+    Drgb: [15, 76, 58],
   },
   {
     name: '沈香茶',
@@ -1467,7 +1467,7 @@ export default [
     color: 'TONOCHA2',
     c: 'c',
     f: 'b',
-    Drgb: [79, 114, 108]
+    Drgb: [79, 114, 108],
   },
   {
     name: '青緑',
@@ -1476,7 +1476,7 @@ export default [
     color: 'AOMIDORI',
     c: 'c',
     f: 'b',
-    Drgb: [0, 170, 144]
+    Drgb: [0, 170, 144],
   },
   {
     name: '青磁',
@@ -1485,7 +1485,7 @@ export default [
     color: 'SEIJI',
     c: 'c',
     f: 'd',
-    Drgb: [105, 176, 172]
+    Drgb: [105, 176, 172],
   },
   {
     name: '鉄',
@@ -1494,7 +1494,7 @@ export default [
     color: 'TETSU',
     c: 'c',
     f: 'b',
-    Drgb: [38, 69, 61]
+    Drgb: [38, 69, 61],
   },
   {
     name: '水浅葱',
@@ -1503,7 +1503,7 @@ export default [
     color: 'MIZUASAGI',
     c: 'c',
     f: 'd',
-    Drgb: [102, 186, 183]
+    Drgb: [102, 186, 183],
   },
   {
     name: '青碧',
@@ -1512,7 +1512,7 @@ export default [
     color: 'SEIHEKI',
     c: 'c',
     f: 'b',
-    Drgb: [38, 135, 133]
+    Drgb: [38, 135, 133],
   },
   {
     name: '錆鉄御納戸',
@@ -1521,7 +1521,7 @@ export default [
     color: 'SABITETSUONANDO',
     c: 'c',
     f: 'b',
-    Drgb: [64, 91, 85]
+    Drgb: [64, 91, 85],
   },
   {
     name: '高麗納戸',
@@ -1530,7 +1530,7 @@ export default [
     color: 'KORAINANDO',
     c: 'c',
     f: 'b',
-    Drgb: [48, 90, 86]
+    Drgb: [48, 90, 86],
   },
   {
     name: '白群',
@@ -1539,7 +1539,7 @@ export default [
     color: 'BYAKUGUN',
     c: 'c',
     f: 'd',
-    Drgb: [120, 194, 196]
+    Drgb: [120, 194, 196],
   },
   {
     name: '御召茶',
@@ -1548,7 +1548,7 @@ export default [
     color: 'OMESHICHA',
     c: 'c',
     f: 'b',
-    Drgb: [55, 107, 109]
+    Drgb: [55, 107, 109],
   },
   {
     name: '瓶覗',
@@ -1557,7 +1557,7 @@ export default [
     color: 'KAMENOZOKI',
     c: 'c',
     f: 'd',
-    Drgb: [165, 222, 228]
+    Drgb: [165, 222, 228],
   },
   {
     name: '深川鼠',
@@ -1566,7 +1566,7 @@ export default [
     color: 'FUKAGAWANEZUMI',
     c: 'c',
     f: 'd',
-    Drgb: [119, 150, 154]
+    Drgb: [119, 150, 154],
   },
   {
     name: '錆浅葱',
@@ -1575,7 +1575,7 @@ export default [
     color: 'SABIASAGI',
     c: 'c',
     f: 'd',
-    Drgb: [102, 153, 161]
+    Drgb: [102, 153, 161],
   },
   {
     name: '水',
@@ -1584,7 +1584,7 @@ export default [
     color: 'MIZU',
     c: 'c',
     f: 'd',
-    Drgb: [129, 199, 212]
+    Drgb: [129, 199, 212],
   },
   {
     name: '浅葱',
@@ -1593,7 +1593,7 @@ export default [
     color: 'ASAGI',
     c: 'c',
     f: 'd',
-    Drgb: [51, 166, 184]
+    Drgb: [51, 166, 184],
   },
   {
     name: '御納戸',
@@ -1602,7 +1602,7 @@ export default [
     color: 'ONANDO',
     c: 'c',
     f: 'b',
-    Drgb: [12, 72, 66]
+    Drgb: [12, 72, 66],
   },
   {
     name: '藍',
@@ -1611,7 +1611,7 @@ export default [
     color: 'AI',
     c: 'c',
     f: 'b',
-    Drgb: [13, 86, 97]
+    Drgb: [13, 86, 97],
   },
   {
     name: '新橋',
@@ -1620,7 +1620,7 @@ export default [
     color: 'SHINBASHI',
     c: 'c',
     f: 'b',
-    Drgb: [0, 137, 167]
+    Drgb: [0, 137, 167],
   },
   {
     name: '錆御納戸',
@@ -1629,7 +1629,7 @@ export default [
     color: 'SABIONANDO',
     c: 'c',
     f: 'b',
-    Drgb: [51, 103, 116]
+    Drgb: [51, 103, 116],
   },
   {
     name: '鉄御納戸',
@@ -1638,7 +1638,7 @@ export default [
     color: 'TETSUONANDO',
     c: 'c',
     f: 'b',
-    Drgb: [37, 83, 89]
+    Drgb: [37, 83, 89],
   },
   {
     name: '花浅葱',
@@ -1647,7 +1647,7 @@ export default [
     color: 'HANAASAGI',
     c: 'c',
     f: 'b',
-    Drgb: [30, 136, 168]
+    Drgb: [30, 136, 168],
   },
   {
     name: '藍鼠',
@@ -1656,7 +1656,7 @@ export default [
     color: 'AINEZUMI',
     c: 'c',
     f: 'b',
-    Drgb: [86, 108, 115]
+    Drgb: [86, 108, 115],
   },
   {
     name: '舛花',
@@ -1665,7 +1665,7 @@ export default [
     color: 'MASUHANA',
     c: 'c',
     f: 'b',
-    Drgb: [87, 124, 138]
+    Drgb: [87, 124, 138],
   },
   {
     name: '空',
@@ -1674,7 +1674,7 @@ export default [
     color: 'SORA',
     c: 'c',
     f: 'd',
-    Drgb: [88, 178, 220]
+    Drgb: [88, 178, 220],
   },
   {
     name: '熨斗目花',
@@ -1683,7 +1683,7 @@ export default [
     color: 'NOSHIMEHANA',
     c: 'c',
     f: 'b',
-    Drgb: [43, 95, 117]
+    Drgb: [43, 95, 117],
   },
   {
     name: '千草',
@@ -1692,7 +1692,7 @@ export default [
     color: 'CHIGUSA',
     c: 'c',
     f: 'd',
-    Drgb: [58, 143, 183]
+    Drgb: [58, 143, 183],
   },
   {
     name: '御召御納戸',
@@ -1701,7 +1701,7 @@ export default [
     color: 'OMESHIONANDO',
     c: 'c',
     f: 'b',
-    Drgb: [46, 92, 110]
+    Drgb: [46, 92, 110],
   },
   {
     name: '縹',
@@ -1710,7 +1710,7 @@ export default [
     color: 'HANADA',
     c: 'c',
     f: 'b',
-    Drgb: [0, 98, 132]
+    Drgb: [0, 98, 132],
   },
   {
     name: '勿忘草',
@@ -1719,7 +1719,7 @@ export default [
     color: 'WASURENAGUSA',
     c: 'c',
     f: 'd',
-    Drgb: [125, 185, 222]
+    Drgb: [125, 185, 222],
   },
   {
     name: '群青',
@@ -1728,7 +1728,7 @@ export default [
     color: 'GUNJYO',
     c: 'c',
     f: 'd',
-    Drgb: [81, 168, 221]
+    Drgb: [81, 168, 221],
   },
   {
     name: '露草',
@@ -1737,7 +1737,7 @@ export default [
     color: 'TSUYUKUSA',
     c: 'c',
     f: 'd',
-    Drgb: [46, 169, 223]
+    Drgb: [46, 169, 223],
   },
   {
     name: '黒橡',
@@ -1746,7 +1746,7 @@ export default [
     color: 'KUROTSURUBAMI',
     c: 'b',
     f: 'b',
-    Drgb: [11, 16, 19]
+    Drgb: [11, 16, 19],
   },
   {
     name: '紺',
@@ -1755,7 +1755,7 @@ export default [
     color: 'KON',
     c: 'c',
     f: 'b',
-    Drgb: [15, 37, 64]
+    Drgb: [15, 37, 64],
   },
   {
     name: '褐',
@@ -1764,7 +1764,7 @@ export default [
     color: 'KACHI',
     c: 'b',
     f: 'b',
-    Drgb: [8, 25, 45]
+    Drgb: [8, 25, 45],
   },
   {
     name: '瑠璃',
@@ -1773,7 +1773,7 @@ export default [
     color: 'RURI',
     c: 'c',
     f: 'b',
-    Drgb: [0, 92, 175]
+    Drgb: [0, 92, 175],
   },
   {
     name: '瑠璃紺',
@@ -1782,7 +1782,7 @@ export default [
     color: 'RURIKON',
     c: 'c',
     f: 'b',
-    Drgb: [11, 52, 110]
+    Drgb: [11, 52, 110],
   },
   {
     name: '紅碧',
@@ -1791,7 +1791,7 @@ export default [
     color: 'BENIMIDORI',
     c: 'c',
     f: 'd',
-    Drgb: [123, 144, 210]
+    Drgb: [123, 144, 210],
   },
   {
     name: '藤鼠',
@@ -1800,7 +1800,7 @@ export default [
     color: 'FUJINEZUMI',
     c: 'c',
     f: 'd',
-    Drgb: [110, 117, 164]
+    Drgb: [110, 117, 164],
   },
   {
     name: '鉄紺',
@@ -1809,7 +1809,7 @@ export default [
     color: 'TETSUKON',
     c: 'c',
     f: 'b',
-    Drgb: [38, 30, 71]
+    Drgb: [38, 30, 71],
   },
   {
     name: '紺青',
@@ -1818,7 +1818,7 @@ export default [
     color: 'KONJYO',
     c: 'c',
     f: 'b',
-    Drgb: [17, 50, 133]
+    Drgb: [17, 50, 133],
   },
   {
     name: '紅掛花',
@@ -1827,7 +1827,7 @@ export default [
     color: 'BENIKAKEHANA',
     c: 'c',
     f: 'b',
-    Drgb: [78, 79, 151]
+    Drgb: [78, 79, 151],
   },
   {
     name: '紺桔梗',
@@ -1836,7 +1836,7 @@ export default [
     color: 'KONKIKYO',
     c: 'c',
     f: 'b',
-    Drgb: [33, 30, 85]
+    Drgb: [33, 30, 85],
   },
   {
     name: '藤',
@@ -1845,7 +1845,7 @@ export default [
     color: 'FUJI',
     c: 'c',
     f: 'd',
-    Drgb: [139, 129, 195]
+    Drgb: [139, 129, 195],
   },
   {
     name: '二藍',
@@ -1854,7 +1854,7 @@ export default [
     color: 'FUTAAI',
     c: 'c',
     f: 'b',
-    Drgb: [112, 100, 154]
+    Drgb: [112, 100, 154],
   },
   {
     name: '楝',
@@ -1863,7 +1863,7 @@ export default [
     color: 'OUCHI',
     c: 'c',
     f: 'd',
-    Drgb: [155, 144, 194]
+    Drgb: [155, 144, 194],
   },
   {
     name: '藤紫',
@@ -1872,7 +1872,7 @@ export default [
     color: 'FUJIMURASAKI',
     c: 'c',
     f: 'd',
-    Drgb: [138, 107, 190]
+    Drgb: [138, 107, 190],
   },
   {
     name: '桔梗',
@@ -1881,7 +1881,7 @@ export default [
     color: 'KIKYO',
     c: 'c',
     f: 'b',
-    Drgb: [106, 76, 156]
+    Drgb: [106, 76, 156],
   },
   {
     name: '紫苑',
@@ -1890,7 +1890,7 @@ export default [
     color: 'SHION',
     c: 'c',
     f: 'd',
-    Drgb: [143, 119, 181]
+    Drgb: [143, 119, 181],
   },
   {
     name: '滅紫',
@@ -1899,7 +1899,7 @@ export default [
     color: 'MESSHI',
     c: 'p',
     f: 'b',
-    Drgb: [83, 61, 91]
+    Drgb: [83, 61, 91],
   },
   {
     name: '薄',
@@ -1908,7 +1908,7 @@ export default [
     color: 'USU',
     c: 'p',
     f: 'd',
-    Drgb: [178, 143, 206]
+    Drgb: [178, 143, 206],
   },
   {
     name: '半',
@@ -1917,7 +1917,7 @@ export default [
     color: 'HASHITA',
     c: 'p',
     f: 'd',
-    Drgb: [152, 109, 178]
+    Drgb: [152, 109, 178],
   },
   {
     name: '江戸紫',
@@ -1926,7 +1926,7 @@ export default [
     color: 'EDOMURASAKI',
     c: 'p',
     f: 'b',
-    Drgb: [119, 66, 141]
+    Drgb: [119, 66, 141],
   },
   {
     name: '紫紺',
@@ -1935,7 +1935,7 @@ export default [
     color: 'SHIKON',
     c: 'p',
     f: 'b',
-    Drgb: [60, 47, 65]
+    Drgb: [60, 47, 65],
   },
   {
     name: '深紫',
@@ -1944,7 +1944,7 @@ export default [
     color: 'KOKIMURASAKI',
     c: 'p',
     f: 'b',
-    Drgb: [74, 34, 93]
+    Drgb: [74, 34, 93],
   },
   {
     name: '菫',
@@ -1953,7 +1953,7 @@ export default [
     color: 'SUMIRE',
     c: 'p',
     f: 'b',
-    Drgb: [102, 50, 124]
+    Drgb: [102, 50, 124],
   },
   {
     name: '紫',
@@ -1962,7 +1962,7 @@ export default [
     color: 'MURASAKI',
     c: 'p',
     f: 'b',
-    Drgb: [89, 44, 99]
+    Drgb: [89, 44, 99],
   },
   {
     name: '菖蒲',
@@ -1971,7 +1971,7 @@ export default [
     color: 'AYAME',
     c: 'p',
     f: 'b',
-    Drgb: [111, 51, 129]
+    Drgb: [111, 51, 129],
   },
   {
     name: '藤煤竹',
@@ -1980,7 +1980,7 @@ export default [
     color: 'FUJISUSUTAKE',
     c: 'r',
     f: 'b',
-    Drgb: [87, 76, 87]
+    Drgb: [87, 76, 87],
   },
   {
     name: '紅藤',
@@ -1989,7 +1989,7 @@ export default [
     color: 'BENIFUJI',
     c: 'p',
     f: 'd',
-    Drgb: [180, 129, 187]
+    Drgb: [180, 129, 187],
   },
   {
     name: '黒紅',
@@ -1998,7 +1998,7 @@ export default [
     color: 'KUROBENI',
     c: 'r',
     f: 'b',
-    Drgb: [63, 43, 54]
+    Drgb: [63, 43, 54],
   },
   {
     name: '茄子紺',
@@ -2007,7 +2007,7 @@ export default [
     color: 'NASUKON',
     c: 'r',
     f: 'b',
-    Drgb: [87, 42, 63]
+    Drgb: [87, 42, 63],
   },
   {
     name: '葡萄鼠',
@@ -2016,7 +2016,7 @@ export default [
     color: 'BUDOHNEZUMI',
     c: 'r',
     f: 'b',
-    Drgb: [94, 61, 80]
+    Drgb: [94, 61, 80],
   },
   {
     name: '鳩羽鼠',
@@ -2025,7 +2025,7 @@ export default [
     color: 'HATOBANEZUMI',
     c: 'r',
     f: 'b',
-    Drgb: [114, 99, 110]
+    Drgb: [114, 99, 110],
   },
   {
     name: '杜若',
@@ -2034,7 +2034,7 @@ export default [
     color: 'KAKITSUBATA',
     c: 'r',
     f: 'b',
-    Drgb: [98, 41, 84]
+    Drgb: [98, 41, 84],
   },
   {
     name: '蒲葡',
@@ -2043,7 +2043,7 @@ export default [
     color: 'EBIZOME',
     c: 'r',
     f: 'b',
-    Drgb: [109, 46, 91]
+    Drgb: [109, 46, 91],
   },
   {
     name: '牡丹',
@@ -2052,7 +2052,7 @@ export default [
     color: 'BOTAN',
     c: 'r',
     f: 'd',
-    Drgb: [193, 50, 142]
+    Drgb: [193, 50, 142],
   },
   {
     name: '梅紫',
@@ -2061,7 +2061,7 @@ export default [
     color: 'UMEMURASAKI',
     c: 'r',
     f: 'b',
-    Drgb: [168, 73, 122]
+    Drgb: [168, 73, 122],
   },
   {
     name: '似紫',
@@ -2070,7 +2070,7 @@ export default [
     color: 'NISEMURASAKI',
     c: 'r',
     f: 'b',
-    Drgb: [86, 46, 55]
+    Drgb: [86, 46, 55],
   },
   {
     name: '躑躅',
@@ -2079,7 +2079,7 @@ export default [
     color: 'TSUTSUJI',
     c: 'r',
     f: 'd',
-    Drgb: [224, 60, 138]
+    Drgb: [224, 60, 138],
   },
   {
     name: '紫鳶',
@@ -2088,7 +2088,7 @@ export default [
     color: 'MURASAKITOBI',
     c: 'r',
     f: 'b',
-    Drgb: [96, 55, 62]
+    Drgb: [96, 55, 62],
   },
   {
     name: '白練',
@@ -2097,7 +2097,7 @@ export default [
     color: 'SHIRONERI',
     c: 'w',
     f: 'd',
-    Drgb: [252, 250, 242]
+    Drgb: [252, 250, 242],
   },
   {
     name: '胡粉',
@@ -2106,7 +2106,7 @@ export default [
     color: 'GOFUN',
     c: 'w',
     f: 'd',
-    Drgb: [255, 255, 251]
+    Drgb: [255, 255, 251],
   },
   {
     name: '白鼠',
@@ -2115,7 +2115,7 @@ export default [
     color: 'SHIRONEZUMI',
     c: 'y',
     f: 'd',
-    Drgb: [189, 192, 186]
+    Drgb: [189, 192, 186],
   },
   {
     name: '銀鼠',
@@ -2124,7 +2124,7 @@ export default [
     color: 'GINNEZUMI',
     c: 'c',
     f: 'd',
-    Drgb: [145, 152, 159]
+    Drgb: [145, 152, 159],
   },
   {
     name: '鉛',
@@ -2133,7 +2133,7 @@ export default [
     color: 'NAMARI',
     c: 'r',
     f: 'b',
-    Drgb: [120, 120, 120]
+    Drgb: [120, 120, 120],
   },
   {
     name: '灰',
@@ -2142,7 +2142,7 @@ export default [
     color: 'HAI',
     c: 'r',
     f: 'd',
-    Drgb: [130, 130, 130]
+    Drgb: [130, 130, 130],
   },
   {
     name: '素鼠',
@@ -2151,7 +2151,7 @@ export default [
     color: 'SUNEZUMI',
     c: 'c',
     f: 'b',
-    Drgb: [120, 125, 123]
+    Drgb: [120, 125, 123],
   },
   {
     name: '利休鼠',
@@ -2160,7 +2160,7 @@ export default [
     color: 'RIKYUNEZUMI',
     c: 'g',
     f: 'b',
-    Drgb: [112, 124, 116]
+    Drgb: [112, 124, 116],
   },
   {
     name: '鈍',
@@ -2169,7 +2169,7 @@ export default [
     color: 'NIBI',
     c: 'g',
     f: 'b',
-    Drgb: [101, 103, 101]
+    Drgb: [101, 103, 101],
   },
   {
     name: '青鈍',
@@ -2178,7 +2178,7 @@ export default [
     color: 'AONIBI',
     c: 'g',
     f: 'b',
-    Drgb: [83, 89, 83]
+    Drgb: [83, 89, 83],
   },
   {
     name: '溝鼠',
@@ -2187,7 +2187,7 @@ export default [
     color: 'DOBUNEZUMI',
     c: 'y',
     f: 'b',
-    Drgb: [79, 79, 72]
+    Drgb: [79, 79, 72],
   },
   {
     name: '紅消鼠',
@@ -2196,7 +2196,7 @@ export default [
     color: 'BENIKESHINEZUMI',
     c: 'r',
     f: 'b',
-    Drgb: [82, 67, 61]
+    Drgb: [82, 67, 61],
   },
   {
     name: '藍墨茶',
@@ -2205,7 +2205,7 @@ export default [
     color: 'AISUMICHA',
     c: 'g',
     f: 'b',
-    Drgb: [55, 60, 56]
+    Drgb: [55, 60, 56],
   },
   {
     name: '檳榔子染',
@@ -2214,7 +2214,7 @@ export default [
     color: 'BINROJIZOME',
     c: 'y',
     f: 'b',
-    Drgb: [58, 50, 38]
+    Drgb: [58, 50, 38],
   },
   {
     name: '消炭',
@@ -2223,7 +2223,7 @@ export default [
     color: 'KESHIZUMI',
     c: 'r',
     f: 'b',
-    Drgb: [67, 67, 67]
+    Drgb: [67, 67, 67],
   },
   {
     name: '墨',
@@ -2232,7 +2232,7 @@ export default [
     color: 'SUMI',
     c: 'b',
     f: 'b',
-    Drgb: [28, 28, 28]
+    Drgb: [28, 28, 28],
   },
   {
     name: '黒',
@@ -2241,7 +2241,7 @@ export default [
     color: 'KURO',
     c: 'b',
     f: 'b',
-    Drgb: [8, 8, 8]
+    Drgb: [8, 8, 8],
   },
   {
     name: '呂',
@@ -2250,6 +2250,6 @@ export default [
     color: 'RO',
     c: 'b',
     f: 'b',
-    Drgb: [12, 12, 12]
-  }
+    Drgb: [12, 12, 12],
+  },
 ]

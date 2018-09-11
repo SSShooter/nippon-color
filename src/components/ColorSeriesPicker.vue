@@ -1,77 +1,80 @@
 <template>
-  <div class="picker"
+  <div
+    class="picker"
     @click="toggle">
-    <div class="circle"
+    <div
       v-for="item in list"
       :key="item.hex"
       :data-color="item.color"
-      :style="`border:0.1rem solid #${borderColor==='b'?'fffffb':'554236'};background-color:#${item.hex};z-index:${item.color === currentColor?999:1};`"></div>
-    <div class="circle linear-gradient"
-      data-color="all"
-      :style="`border:0.1rem solid #${borderColor==='b'?'fffffb':'554236'};z-index:${'all' === currentColor?999:1};`"></div>
+      :style="`border:0.1rem solid #${borderColor==='b'?'fffffb':'554236'};background-color:#${item.hex};z-index:${item.color === currentColor?999:1};`"
+      class="circle"/>
+    <div
+      :style="`border:0.1rem solid #${borderColor==='b'?'fffffb':'554236'};z-index:${'all' === currentColor?999:1};`"
+      class="circle linear-gradient"
+      data-color="all"/>
   </div>
 </template>
 
 <script>
-import anime from "animejs";
+import anime from 'animejs'
 export default {
-  props: ["borderColor"],
-  data() {
+  props: ['borderColor'],
+  data () {
     return {
       isOpen: false,
       anime: null,
       list: [
-        { hex: "fffffb", color: "w" },
-        { hex: "0c0c0c", color: "b" },
-        { hex: "8A6BBE", color: "p" },
-        { hex: "00AA90", color: "g" },
-        { hex: "86C166", color: "c" },
-        { hex: "F7C242", color: "y" },
-        { hex: "CB1B45", color: "r" }
+        { hex: 'fffffb', color: 'w' },
+        { hex: '0c0c0c', color: 'b' },
+        { hex: '8A6BBE', color: 'p' },
+        { hex: '00AA90', color: 'g' },
+        { hex: '86C166', color: 'c' },
+        { hex: 'F7C242', color: 'y' },
+        { hex: 'CB1B45', color: 'r' },
       ],
-      currentColor: null
-    };
-  },
-  mounted() {},
-  methods: {
-    open() {
-      anime({
-        targets: document.querySelectorAll(".circle"),
-        translateY: [
-          "0rem",
-          function(el, i, l) {
-            return i * -2 + "rem";
-          }
-        ],
-        duration: 100,
-        easing: "easeInSine"
-      });
-    },
-    close() {
-      anime({
-        targets: document.querySelectorAll(".circle"),
-        translateY: [
-          function(el, i, l) {
-            return i * -2 + "rem";
-          },
-          "0rem"
-        ],
-        duration: 100,
-        easing: "easeInSine"
-      });
-    },
-    toggle(e) {
-      if (this.isOpen === false) {
-        this.open();
-        this.isOpen = true;
-      } else {
-        this.close();
-        this.$emit("colorChange", (this.currentColor = e.target.dataset.color));
-        this.isOpen = false;
-      }
+      currentColor: null,
     }
-  }
-};
+  },
+  mounted () {},
+  methods: {
+    open () {
+      anime({
+        targets: document.querySelectorAll('.circle'),
+        translateY: [
+          '0rem',
+          function (el, i, l) {
+            return i * -2 + 'rem'
+          },
+        ],
+        duration: 100,
+        easing: 'easeInSine',
+      })
+    },
+    close () {
+      anime({
+        targets: document.querySelectorAll('.circle'),
+        translateY: [
+          function (el, i, l) {
+            return i * -2 + 'rem'
+          },
+          '0rem',
+        ],
+        duration: 100,
+        easing: 'easeInSine',
+      })
+    },
+    toggle (e) {
+      if (this.isOpen === false) {
+        this.open()
+        this.isOpen = true
+      } else {
+        this.close()
+        this.$emit('colorChange', (this.currentColor = e.target.dataset.color))
+        this.isOpen = false
+      }
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
