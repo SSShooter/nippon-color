@@ -12,7 +12,12 @@
 
 <script>
 export default {
-  props: ['fillColor'],
+  props: {
+    fillColor: {
+      type: String,
+      default: 'b',
+    },
+  },
 }
 </script>
 

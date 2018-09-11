@@ -4,13 +4,12 @@
       :style="`background-color:#${colorSelected.rgb};`"
       :class="{'color-bright':colorSelected.f === 'b'}"
       class="display">
-
-      <ShareButton
-        class="share"
-        @click.native="share(colorSelected.name)" />
       <!-- 添加到喜爱颜色 -->
-      <!-- 复制hex -->
       <!-- 随机 -->
+      <CopyButton
+        :fill-color="colorSelected.f"
+        class="copy"
+        @click.native="copy(colorSelected.rgb)" />
       <ShareButton
         :fill-color="colorSelected.f"
         class="share"
@@ -30,7 +29,7 @@
           v-for="(el,i) in ['r','g','b']"
           :key="el"
           :style="`width:${colorSelected.Drgb?(colorSelected.Drgb[i]/255*100):0}%`"
-          :class="{[el]:true,'bg-bright':colorSelected.f === 'b'}"/>
+          :class="{[el]:true,'bg-bright':colorSelected.f === 'b'}" />
       </div>
       <div
         v-if="colorSelected.Drgb"
@@ -71,6 +70,7 @@ import anime from 'animejs'
 import ColorTab from '@/components/ColorTab.vue'
 import ColorSeriesPicker from '@/components/ColorSeriesPicker.vue'
 import ShareButton from '@/components/ShareButton.vue'
+import CopyButton from '@/components/CopyButton.vue'
 import colorList from '@/data/color'
 
 export default {
@@ -79,6 +79,7 @@ export default {
     ColorTab,
     ColorSeriesPicker,
     ShareButton,
+    CopyButton,
   },
   data () {
     return {
@@ -123,6 +124,7 @@ export default {
       this.colorSelected = this.colorList[0]
     },
     changeColor (color) {
+      // watch $route and change color
       this.$router.push({ path: '/', query: { c: color.rgb } })
     },
     share (name) {
@@ -130,6 +132,9 @@ export default {
         `https://twitter.com/intent/tweet?hashtags=nipponcolors&via=zhoudejie&text=${name ||
           ''}`
       )
+    },
+    copy (hex) {
+      navigator.clipboard.writeText(`#${hex}`)
     },
     listAnime () {
       anime({
@@ -198,6 +203,15 @@ export default {
     width: 1.2rem;
     bottom: 1.5rem;
     right: 2.5rem;
+    fill: #0c0c0c;
+  }
+
+  .copy {
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    bottom: 1.5rem;
+    right: 4rem;
     fill: #0c0c0c;
   }
   .display {

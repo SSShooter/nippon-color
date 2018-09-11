@@ -7,18 +7,23 @@
       :key="item.hex"
       :data-color="item.color"
       :style="`border:0.1rem solid #${borderColor==='b'?'fffffb':'554236'};background-color:#${item.hex};z-index:${item.color === currentColor?999:1};`"
-      class="circle"/>
+      class="circle" />
     <div
       :style="`border:0.1rem solid #${borderColor==='b'?'fffffb':'554236'};z-index:${'all' === currentColor?999:1};`"
       class="circle linear-gradient"
-      data-color="all"/>
+      data-color="all" />
   </div>
 </template>
 
 <script>
 import anime from 'animejs'
 export default {
-  props: ['borderColor'],
+  props: {
+    borderColor: {
+      type: String,
+      default: 'b',
+    },
+  },
   data () {
     return {
       isOpen: false,
