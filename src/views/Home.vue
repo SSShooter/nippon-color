@@ -1,177 +1,185 @@
 <template>
   <div class="home">
-    <div class="display"
+    <div
       :style="`background-color:#${colorSelected.rgb};`"
-      :class="{'color-bright':colorSelected.f === 'b'}">
+      :class="{'color-bright':colorSelected.f === 'b'}"
+      class="display">
 
-      <ShareButton @click.native="share(colorSelected.name)"
-        class="share" />
-        <!-- 添加到喜爱颜色 -->
-        <!-- 复制hex -->
-        <!-- 随机 -->
-      <ShareButton class="share"
-        :fillColor="colorSelected.f"
+      <ShareButton
+        class="share"
         @click.native="share(colorSelected.name)" />
-      <ColorSeriesPicker class="series"
-        :borderColor="colorSelected.f"
+      <!-- 添加到喜爱颜色 -->
+      <!-- 复制hex -->
+      <!-- 随机 -->
+      <ShareButton
+        :fill-color="colorSelected.f"
+        class="share"
+        @click.native="share(colorSelected.name)" />
+      <ColorSeriesPicker
+        :border-color="colorSelected.f"
+        class="series"
         @colorChange="handleColorChange" />
       <div class="kanji">
-        {{colorSelected.name||'日本の伝統色'}}
+        {{ colorSelected.name||'日本の伝統色' }}
       </div>
       <div class="romaji">
-        {{colorSelected.color||'The Traditional Colors of Japan'}}
+        {{ colorSelected.color||'The Traditional Colors of Japan' }}
       </div>
       <div class="rgb-block">
-        <div v-for="(el,i) in ['r','g','b']"
+        <div
+          v-for="(el,i) in ['r','g','b']"
           :key="el"
           :style="`width:${colorSelected.Drgb?(colorSelected.Drgb[i]/255*100):0}%`"
-          :class="{[el]:true,'bg-bright':colorSelected.f === 'b'}"></div>
+          :class="{[el]:true,'bg-bright':colorSelected.f === 'b'}"/>
       </div>
-      <div class="rgb-number"
-        v-if="colorSelected.Drgb">
+      <div
+        v-if="colorSelected.Drgb"
+        class="rgb-number">
         <template v-for="el in ['R','G','B']">
-          <div :key="el">{{el}}</div>
-          <div :key="el + 'n'"
+          <div :key="el">{{ el }}</div>
+          <div
+            :key="el + 'n'"
             class="n">0</div>
         </template>
       </div>
-      <div class="cmyk-number"
-        v-if="colorSelected.cmyk">
-        <div v-for="el in ['c','m','y','k']"
+      <div
+        v-if="colorSelected.cmyk"
+        class="cmyk-number">
+        <div
+          v-for="el in ['c','m','y','k']"
           :key="el"
-          class="n"
-          :class="{[el]:true}">0</div>
+          :class="{[el]:true}"
+          class="n">0</div>
       </div>
     </div>
     <div class="tab-wrapper">
       <div class="tab">
-      <ColorTab class="js-tab-item tab-item"
-        v-for="color in colorList"
-        @click.native="changeColor(color)"
-        :key="color.name"
-        :kanji="color.name"
-        :romaji="color.color"
-        :cmyk="color.cmyk"
-        :rgb="color.rgb" />
-        </div>
+        <ColorTab
+          v-for="color in colorList"
+          :key="color.name"
+          :kanji="color.name"
+          :rgb="color.rgb"
+          class="js-tab-item tab-item"
+          @click.native="changeColor(color)" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import anime from "animejs";
-import ColorTab from "@/components/ColorTab.vue";
-import ColorSeriesPicker from "@/components/ColorSeriesPicker.vue";
-import ShareButton from "@/components/ShareButton.vue";
-import colorList from "@/data/color";
+import anime from 'animejs'
+import ColorTab from '@/components/ColorTab.vue'
+import ColorSeriesPicker from '@/components/ColorSeriesPicker.vue'
+import ShareButton from '@/components/ShareButton.vue'
+import colorList from '@/data/color'
 
 export default {
-  name: "home",
-  data() {
-    return {
-      colorList: [],
-      colorSelected: {}
-    };
-  },
+  name: 'Home',
   components: {
     ColorTab,
     ColorSeriesPicker,
-    ShareButton
+    ShareButton,
   },
-  watch: {
-    colorList() {
-      this.$nextTick(() => {
-        this.listAnime();
-      });
-    },
-    colorSelected() {
-      this.$nextTick(() => {
-        this.displayAnime();
-      });
-    },
-    $route(r) {
-      this.retrieveColorAndSelect(r.query.c);
+  data () {
+    return {
+      colorList: [],
+      colorSelected: {},
     }
   },
-  mounted() {
+  watch: {
+    colorList () {
+      this.$nextTick(() => {
+        this.listAnime()
+      })
+    },
+    colorSelected () {
+      this.$nextTick(() => {
+        this.displayAnime()
+      })
+    },
+    $route (r) {
+      this.retrieveColorAndSelect(r.query.c)
+    },
+  },
+  mounted () {
     // trigger watch colorList
-    this.colorList = colorList;
-    this.retrieveColorAndSelect(this.$route.query.c);
+    this.colorList = colorList
+    this.retrieveColorAndSelect(this.$route.query.c)
   },
   methods: {
-    retrieveColorAndSelect(rgb) {
+    retrieveColorAndSelect (rgb) {
       if (rgb) {
-        let color = this.colorList.find(val => val.rgb === rgb);
-        this.colorSelected = color;
+        let color = this.colorList.find(val => val.rgb === rgb)
+        this.colorSelected = color
       } else {
         this.colorSelected = {
-          rgb: "ffffff"
-        };
+          rgb: 'ffffff',
+        }
       }
     },
-    handleColorChange(color) {
-      if (color === "all") this.colorList = colorList;
-      else this.colorList = colorList.filter(val => val.c === color);
-      this.colorSelected = this.colorList[0];
+    handleColorChange (color) {
+      if (color === 'all') this.colorList = colorList
+      else this.colorList = colorList.filter(val => val.c === color)
+      this.colorSelected = this.colorList[0]
     },
-    changeColor(color) {
-      this.$router.push({ path: "/", query: { c: color.rgb } });
+    changeColor (color) {
+      this.$router.push({ path: '/', query: { c: color.rgb } })
     },
-    share(name) {
+    share (name) {
       window.open(
         `https://twitter.com/intent/tweet?hashtags=nipponcolors&via=zhoudejie&text=${name ||
-          ""}`
-      );
+          ''}`
+      )
     },
-    listAnime() {
+    listAnime () {
       anime({
-        targets: document.querySelectorAll(".js-tab-item"),
+        targets: document.querySelectorAll('.js-tab-item'),
         translateY: [250, 0],
         opacity: [0, 1],
-        easing: "easeOutSine",
-        delay: function(el, i, l) {
-          let delay = 80 - i;
-          if (delay > 1) return i * delay;
-          else return i;
+        easing: 'easeOutSine',
+        delay: function (el, i, l) {
+          let delay = 80 - i
+          if (delay > 1) return i * delay
+          else return i
           // hack
           // TODO 元素可见时添加动画，并且需要使用节流函数
-        }
-      });
+        },
+      })
     },
-    displayAnime() {
-      let monji = document.querySelectorAll(".display .kanji,.romaji");
-      let rgb = document.querySelectorAll(".display .rgb-number .n");
-      let cmyk = document.querySelectorAll(".display .cmyk-number .n");
-      anime.remove([monji, rgb, cmyk]);
+    displayAnime () {
+      let monji = document.querySelectorAll('.display .kanji,.romaji')
+      let rgb = document.querySelectorAll('.display .rgb-number .n')
+      let cmyk = document.querySelectorAll('.display .cmyk-number .n')
+      anime.remove([monji, rgb, cmyk])
       anime({
         targets: monji,
         translateX: [150, 0],
         opacity: [0, 1],
-        easing: "easeOutSine"
-      });
+        easing: 'easeOutSine',
+      })
       anime({
         targets: rgb,
         innerHTML: (el, i, l) => {
-          return this.colorSelected.Drgb[i];
+          return this.colorSelected.Drgb[i]
         },
         round: 1,
-        easing: "easeOutSine"
-      });
+        easing: 'easeOutSine',
+      })
       anime({
         targets: cmyk,
         innerHTML: (el, i, l) => {
-          return this.colorSelected.cmyk.slice(i * 3, (i + 1) * 3);
+          return this.colorSelected.cmyk.slice(i * 3, (i + 1) * 3)
         },
         round: 1,
-        easing: "easeOutSine"
-      });
-    }
-  }
-};
+        easing: 'easeOutSine',
+      })
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-@import "@/mixin.scss";
+@import '@/mixin.scss';
 .home {
   height: 100%;
   display: flex;
@@ -206,7 +214,7 @@ export default {
       letter-spacing: 0.2rem;
     }
     .kanji {
-      font-family: "XANO";
+      font-family: 'XANO';
       position: absolute;
       bottom: 1rem;
       left: 1rem;
@@ -230,14 +238,14 @@ export default {
       }
     }
     .rgb-number {
-      font-family: "MONO";
+      font-family: 'MONO';
       font-size: 1.3rem;
       display: flex;
       justify-content: space-around;
     }
     // mononspace needed
     .cmyk-number {
-      font-family: "MONO";
+      font-family: 'MONO';
       font-size: 1.3rem;
       display: flex;
       flex-direction: column;
@@ -255,22 +263,22 @@ export default {
       }
       .c {
         &::after {
-          content: "c";
+          content: 'c';
         }
       }
       .m {
         &::after {
-          content: "m";
+          content: 'm';
         }
       }
       .y {
         &::after {
-          content: "y";
+          content: 'y';
         }
       }
       .k {
         &::after {
-          content: "k";
+          content: 'k';
         }
       }
     }
@@ -296,7 +304,7 @@ export default {
       width: 100%;
       position: relative;
       &:before {
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         height: 100%;

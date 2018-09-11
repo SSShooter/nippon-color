@@ -1,10 +1,11 @@
 <template>
   <div class="card">
-    <div class="color-block"
-      :style="`background-color:#${rgb};`"></div>
+    <div
+      :style="`background-color:#${rgb};`"
+      class="color-block"/>
     <div class="monji-block">
-      <div class="kanji">{{kanji}}</div>
-      <div class="rgb">{{'#'+rgb}}</div>
+      <div class="kanji">{{ kanji }}</div>
+      <div class="rgb">{{ '#'+rgb }}</div>
     </div>
   </div>
 </template>
@@ -13,12 +14,16 @@
 export default {
   name: 'HelloWorld',
   props: {
-    kanji: String,
-    romaji: String,
-    rgb: String,
-    cmyk: String
+    kanji: {
+      type: String,
+      default: '-',
+    },
+    rgb: {
+      type: String,
+      default: '-',
+    },
   },
-  methods: {}
+  methods: {},
 }
 </script>
 
