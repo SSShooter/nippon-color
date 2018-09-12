@@ -16,9 +16,6 @@ html {
 }
 #app {
   height: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #0c0c0c;
 }
 </style>

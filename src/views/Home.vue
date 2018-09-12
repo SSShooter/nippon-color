@@ -74,7 +74,12 @@ import ShareButton from '@/components/ShareButton.vue'
 import CopyButton from '@/components/CopyButton.vue'
 import colorList from '@/data/color'
 
-import { checkInSight, checkInSightInit, throttle } from '@/util.js'
+import {
+  checkInSight,
+  checkInSightInit,
+  throttle,
+  clipboardCopy,
+} from '@/util.js'
 
 export default {
   name: 'Home',
@@ -111,9 +116,9 @@ export default {
     this.colorList = colorList
     // route to specific color
     this.retrieveColorAndSelect(this.$route.query.c)
-    document.querySelector('.tab-wrapper').onscroll = throttle(
-      checkInSight(this.listAnime)
-    )
+    document
+      .querySelector('.tab-wrapper')
+      .addEventListener('scroll', throttle(checkInSight(this.listAnime)))
   },
   methods: {
     retrieveColorAndSelect (rgb) {
@@ -144,9 +149,11 @@ export default {
     },
     copy (hex) {
       if (!this.isCopied) {
-        navigator.clipboard.writeText(`#${hex}`)
+        clipboardCopy(`#${hex}`)
         this.isCopied = true
-        setTimeout(() => { this.isCopied = false }, 1000)
+        setTimeout(() => {
+          this.isCopied = false
+        }, 1000)
       }
     },
     listAnime (el) {
@@ -199,36 +206,39 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  .series {
-    position: absolute;
-    height: 1.2rem;
-    width: 1.2rem;
-    bottom: 1.5rem;
-    right: 1rem;
-  }
-  .share {
-    position: absolute;
-    height: 1.2rem;
-    width: 1.2rem;
-    bottom: 1.5rem;
-    right: 2.5rem;
-    fill: #0c0c0c;
-  }
-
-  .copy {
-    position: absolute;
-    height: 1.2rem;
-    width: 1.2rem;
-    bottom: 1.5rem;
-    right: 4rem;
-    fill: #0c0c0c;
-  }
   .display {
     position: relative;
     height: 100%;
     width: 100px;
     flex-grow: 1;
     transition: all 1s;
+    .series {
+      position: absolute;
+      height: 1.2rem;
+      width: 1.2rem;
+      bottom: 1.5rem;
+      right: 1rem;
+      z-index: 1;
+    }
+    .share {
+      position: absolute;
+      height: 1.2rem;
+      width: 1.2rem;
+      bottom: 1.5rem;
+      right: 2.5rem;
+      fill: #0c0c0c;
+      z-index: 1;
+    }
+
+    .copy {
+      position: absolute;
+      height: 1.2rem;
+      width: 1.2rem;
+      bottom: 1.5rem;
+      right: 4rem;
+      fill: #0c0c0c;
+      z-index: 1;
+    }
     .romaji {
       position: absolute;
       bottom: 1.5rem;

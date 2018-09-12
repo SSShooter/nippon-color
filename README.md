@@ -31,6 +31,7 @@
 - optimise font color base on background color manually
 - optimise sort of color manually
 - design adjustment 
+- scroll to top while color sort changed
 
 ## Project setup
 ```
