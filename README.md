@@ -27,6 +27,7 @@
 - hover & active
 - optimise font color base on background color manually
 - optimise sort of color manually
+- design adjustment 
 
 ## Project setup
 ```

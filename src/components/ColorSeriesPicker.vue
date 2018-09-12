@@ -21,7 +21,7 @@ export default {
   props: {
     borderColor: {
       type: String,
-      default: 'b',
+      default: 'd',
     },
   },
   data () {

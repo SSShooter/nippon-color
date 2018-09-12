@@ -73,6 +73,8 @@ import ShareButton from '@/components/ShareButton.vue'
 import CopyButton from '@/components/CopyButton.vue'
 import colorList from '@/data/color'
 
+import { checkInSight, checkInSightInit, throttle } from '@/util.js'
+
 export default {
   name: 'Home',
   components: {
@@ -90,7 +92,7 @@ export default {
   watch: {
     colorList () {
       this.$nextTick(() => {
-        this.listAnime()
+        checkInSightInit(this.listAnime)()
       })
     },
     colorSelected () {
@@ -105,7 +107,11 @@ export default {
   mounted () {
     // trigger watch colorList
     this.colorList = colorList
+    // route to specific color
     this.retrieveColorAndSelect(this.$route.query.c)
+    document.querySelector('.tab-wrapper').onscroll = throttle(
+      checkInSight(this.listAnime)
+    )
   },
   methods: {
     retrieveColorAndSelect (rgb) {
@@ -128,6 +134,7 @@ export default {
       this.$router.push({ path: '/', query: { c: color.rgb } })
     },
     share (name) {
+      // TODO: add location
       window.open(
         `https://twitter.com/intent/tweet?hashtags=nipponcolors&via=zhoudejie&text=${name ||
           ''}`
@@ -136,18 +143,14 @@ export default {
     copy (hex) {
       navigator.clipboard.writeText(`#${hex}`)
     },
-    listAnime () {
+    listAnime (el) {
       anime({
-        targets: document.querySelectorAll('.js-tab-item'),
+        targets: el,
         translateY: [250, 0],
         opacity: [0, 1],
         easing: 'easeOutSine',
         delay: function (el, i, l) {
-          let delay = 80 - i
-          if (delay > 1) return i * delay
-          else return i
-          // hack
-          // TODO 元素可见时添加动画，并且需要使用节流函数
+          return i * 80
         },
       })
     },
@@ -357,5 +360,8 @@ export default {
 }
 .bg-bright {
   background-color: #fffffb !important;
+}
+.js-tab-item {
+  opacity: 0;
 }
 </style>

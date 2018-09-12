@@ -1,16 +1,65 @@
+export function throttle (fn, mustRun = 60) {
+  let previous = null
+  return function () {
+    const now = new Date()
+    // const context = this
+    const args = arguments
+    if (!previous) {
+      previous = 0
+    }
+    const remaining = now - previous
+    if (mustRun && remaining >= mustRun) {
+      fn.apply(args)
+      previous = now
+    }
+  }
+}
+
+export function isInSight (el) {
+  const bound = el.getBoundingClientRect()
+  const clientHeight = window.innerHeight
+  return bound.top <= clientHeight + 100
+}
+
+export function checkInSightInit (operate) {
+  return () => {
+    const imgs = document.querySelectorAll('.js-tab-item')
+    let initialEl = []
+    Array.from(imgs).forEach(el => {
+      if (!el.isShow && isInSight(el)) {
+        initialEl.push(el)
+        el.isShow = true
+      }
+    })
+    operate(initialEl)
+  }
+}
+
+export function checkInSight (operate) {
+  return () => {
+    const imgs = document.querySelectorAll('.js-tab-item')
+    Array.from(imgs).forEach(el => {
+      if (!el.isShow && isInSight(el)) {
+        operate(el)
+        el.isShow = true
+      }
+    })
+  }
+}
+
 export function whatColor (rgb) {
   let r = parseInt(rgb.slice(0, 2), 16)
   let g = parseInt(rgb.slice(2, 4), 16)
   let b = parseInt(rgb.slice(4, 6), 16)
-  var min = Math.min(r, g, b),
-    max = Math.max(r, g, b),
-    diff = max - min,
-    h = 0
-  if (diff != 0) {
+  var min = Math.min(r, g, b)
+  var max = Math.max(r, g, b)
+  var diff = max - min
+  var h = 0
+  if (diff !== 0) {
     h =
-      (r == max
+      (r === max
         ? (g - b) / diff
-        : g == max
+        : g === max
           ? 2 + (b - r) / diff
           : 4 + (r - g) / diff) * 60
   }

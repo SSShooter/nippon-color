@@ -15,7 +15,7 @@ export default {
   props: {
     fillColor: {
       type: String,
-      default: 'b',
+      default: 'd',
     },
   },
 }
