@@ -12,15 +12,18 @@
 - disable user select
 
 ### v0.9.2
-- responsive design
-- fonts optimization
+- Responsive design
+- Fonts optimization with font spider plus
+
+### v0.9.3
+- Click to copy hex
+- Optimize scroll animate 
 
 ## PWA
 
 
 ## TODO
 - favor color
-- click to copy hex
 - randam color display
 - how to use pwa
 - better scroll experience
@@ -59,4 +62,4 @@ npm run test:unit
 
 ### troubleshooting
 - For gh-pages, use relative address in `manifest.json`
-- Use `npm` instead of `cnpm` when HMR not working.[reference](https://github.com/vuejs/vue-cli/issues/1559)
+- Use `npm` instead of `cnpm` when HMR not working. [Reference](https://github.com/vuejs/vue-cli/issues/1559)
