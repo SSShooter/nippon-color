@@ -8,6 +8,7 @@
       <!-- 随机 -->
       <CopyButton
         :fill-color="colorSelected.f"
+        :copied="isCopied"
         class="copy"
         @click.native="copy(colorSelected.rgb)" />
       <ShareButton
@@ -87,6 +88,7 @@ export default {
     return {
       colorList: [],
       colorSelected: {},
+      isCopied: false,
     }
   },
   watch: {
@@ -134,14 +136,18 @@ export default {
       this.$router.push({ path: '/', query: { c: color.rgb } })
     },
     share (name) {
-      // TODO: add location
+      let location = window.location.href
       window.open(
         `https://twitter.com/intent/tweet?hashtags=nipponcolors&via=zhoudejie&text=${name ||
-          ''}`
+          ''}&url=${location}`
       )
     },
     copy (hex) {
-      navigator.clipboard.writeText(`#${hex}`)
+      if (!this.isCopied) {
+        navigator.clipboard.writeText(`#${hex}`)
+        this.isCopied = true
+        setTimeout(() => { this.isCopied = false }, 1000)
+      }
     },
     listAnime (el) {
       anime({
