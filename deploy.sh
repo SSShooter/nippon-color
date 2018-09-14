@@ -21,5 +21,6 @@ git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:ssshooter/nippon-color.git master:gh-pages
+git push -f https://git.coding.net/ssshooter/nippon-color.git master
 
 cd -

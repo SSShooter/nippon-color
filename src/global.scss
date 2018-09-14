@@ -19,6 +19,7 @@
 
 html {
   font-family: 'MONO', 'Avenir', Helvetica, Arial, sans-serif;
+  overflow-y: hidden; // HACK: Disable Lavas app pull to refresh
   user-select: none;
   outline: none;
   -webkit-touch-callout: none; 

@@ -18,7 +18,7 @@
       <ColorSeriesPicker
         :border-color="colorSelected.f"
         class="series"
-        @colorChange="handleColorChange" />
+        @colorChange="changeColorSeries" />
       <div class="kanji">
         {{ colorSelected.name||'日本の伝統色' }}
       </div>
@@ -119,6 +119,7 @@ export default {
     document
       .querySelector('.tab-wrapper')
       .addEventListener('scroll', throttle(checkInSight(this.listAnime)))
+    window.addEventListener('resize', throttle(checkInSight(this.listAnime), 1000))
   },
   methods: {
     retrieveColorAndSelect (rgb) {
@@ -131,7 +132,9 @@ export default {
         }
       }
     },
-    handleColorChange (color) {
+    changeColorSeries (color) {
+      document
+        .querySelector('.tab-wrapper').scrollTop = 0
       if (color === 'all') this.colorList = colorList
       else this.colorList = colorList.filter(val => val.c === color)
       this.colorSelected = this.colorList[0]
