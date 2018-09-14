@@ -1,14 +1,19 @@
 # nipponcolor
 ## PWA
 <!-- https://www.flaticon.com/packs/japan-21 -->
-<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-[background image from pixiv](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=64253519)
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>        
+
+[Background image from pixiv](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=64253519)
 
 ### v1.0.0 
 v1.0.0 release :tada:
+
 :sparkles: Add random color button
+
 :lipstick: Design adjustment 
+
 :zap: Compress background image
+
 :bug: Scroll to top while color sort is changed
 
 ## TODO
@@ -52,19 +57,7 @@ npm run test:unit
 - Use `npm` instead of `cnpm` when HMR not working. [Reference](https://github.com/vuejs/vue-cli/issues/1559)
 
 ### Changelog
-## v0.9.0
-- Data from [nipponcolors](http://nipponcolors.com/)
-- Build with Vue cli 3
-- PWA
-
-## v0.9.1
-- Add default page
-- Find color by url query
-- disable user select
-
-## v0.9.2
-- Responsive design
-- Fonts optimization with font spider plus
+Read in [wiki](https://github.com/ssshooter/nippon-color/wiki/Changelog)
 
 ## v0.9.3
 - Click to copy hex
