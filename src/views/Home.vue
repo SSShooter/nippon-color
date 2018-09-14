@@ -15,6 +15,10 @@
         :fill-color="colorSelected.f"
         class="share"
         @click.native="share(colorSelected.name)" />
+      <RandomButton
+        :fill-color="colorSelected.f"
+        class="random"
+        @click.native="random" />
       <ColorSeriesPicker
         :border-color="colorSelected.f"
         class="series"
@@ -72,6 +76,7 @@ import ColorTab from '@/components/ColorTab.vue'
 import ColorSeriesPicker from '@/components/ColorSeriesPicker.vue'
 import ShareButton from '@/components/ShareButton.vue'
 import CopyButton from '@/components/CopyButton.vue'
+import RandomButton from '@/components/RandomButton.vue'
 import colorList from '@/data/color'
 
 import {
@@ -88,6 +93,7 @@ export default {
     ColorSeriesPicker,
     ShareButton,
     CopyButton,
+    RandomButton,
   },
   data () {
     return {
@@ -159,6 +165,10 @@ export default {
         }, 1000)
       }
     },
+    random () {
+      let random = colorList[Math.floor(Math.random() * colorList.length)]
+      this.changeColor(random)
+    },
     listAnime (el) {
       anime({
         targets: el,
@@ -215,32 +225,26 @@ export default {
     width: 100px;
     flex-grow: 1;
     transition: all 1s;
-    .series {
+    .series,.share,.copy,.random{
       position: absolute;
       height: 1.2rem;
       width: 1.2rem;
       bottom: 1.5rem;
-      right: 1rem;
-      z-index: 1;
+    }
+    .share,.copy,.random{
+      fill: #0c0c0c;
+    }
+    .series {
+      right: 1+1.6*0rem;
     }
     .share {
-      position: absolute;
-      height: 1.2rem;
-      width: 1.2rem;
-      bottom: 1.5rem;
-      right: 2.5rem;
-      fill: #0c0c0c;
-      z-index: 1;
+      right: 1+1.6*1rem;
     }
-
     .copy {
-      position: absolute;
-      height: 1.2rem;
-      width: 1.2rem;
-      bottom: 1.5rem;
-      right: 4rem;
-      fill: #0c0c0c;
-      z-index: 1;
+      right: 1+1.6*2rem;
+    }
+    .random {
+      right: 1+1.6*3rem;
     }
     .romaji {
       position: absolute;
@@ -345,9 +349,9 @@ export default {
         width: 100%;
         height: 100%;
         position: absolute;
-        background: url(../assets/64253519_p3.png);
+        background: url(../assets/64253519_p9.png);
         background-attachment: local;
-        background-repeat: repeat-y;
+        background-repeat: repeat;
         opacity: 0.3;
       }
       @include for-tablet-up {
@@ -381,6 +385,7 @@ export default {
   background-color: #fffffb !important;
 }
 .js-tab-item {
+  // for animate initial state
   opacity: 0;
 }
 </style>

@@ -5,6 +5,17 @@ module.exports = {
   pwa: {
     themeColor: '#ffffff',
     msTileColor: '#ffffff',
+    workboxOptions: {
+      skipWaiting: true,
+      clientsClaim: true,
+    },
+    iconPaths: {
+      favicon32: 'img/icons/fuji-mountain-32x32.png',
+      favicon16: 'img/icons/fuji-mountain-16x16.png',
+      appleTouchIcon: 'img/icons/apple-touch-icon-152x152.png',
+      maskIcon: 'img/icons/safari-pinned-tab.svg',
+      msTileImage: 'img/icons/msapplication-icon-144x144.png',
+    },
   },
   lintOnSave: process.env.NODE_ENV !== 'production',
   devServer: {
@@ -18,7 +29,7 @@ module.exports = {
       new ImageminPlugin({
         disable: process.env.NODE_ENV !== 'production', // Disable during development
         pngquant: {
-          quality: '95-100',
+          quality: '80',
         },
       }),
     ],
