@@ -173,7 +173,9 @@ export default {
       this.changeColor(random)
     },
     listAnime (el, isInit) {
-      if (this.lastEls && isInit) { anime.remove(this.lastEls) }
+      if (this.lastEls && isInit) {
+        anime.remove(this.lastEls)
+      }
       this.lastEls = el
       anime({
         targets: el,
@@ -352,6 +354,7 @@ export default {
       flex-basis: 1200px;
     }
     .tab {
+      min-height: 100%;
       width: 100%;
       position: relative;
       &:before {
