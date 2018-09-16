@@ -26,12 +26,13 @@ export function checkInSightInit (operate) {
     const imgs = document.querySelectorAll('.js-tab-item')
     let initialEl = []
     Array.from(imgs).forEach(el => {
+      el.isShow = false // reset show state
       if (!el.isShow && isInSight(el)) {
         initialEl.push(el)
         el.isShow = true
       }
     })
-    operate(initialEl)
+    operate(initialEl, true)
   }
 }
 

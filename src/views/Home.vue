@@ -100,6 +100,7 @@ export default {
       colorList: [],
       colorSelected: {},
       isCopied: false,
+      lastEls: null,
     }
   },
   watch: {
@@ -125,7 +126,10 @@ export default {
     document
       .querySelector('.tab-wrapper')
       .addEventListener('scroll', throttle(checkInSight(this.listAnime)))
-    window.addEventListener('resize', throttle(checkInSight(this.listAnime), 1000))
+    window.addEventListener(
+      'resize',
+      throttle(checkInSight(this.listAnime), 1000)
+    )
   },
   methods: {
     retrieveColorAndSelect (rgb) {
@@ -139,8 +143,7 @@ export default {
       }
     },
     changeColorSeries (color) {
-      document
-        .querySelector('.tab-wrapper').scrollTop = 0
+      document.querySelector('.tab-wrapper').scrollTop = 0
       if (color === 'all') this.colorList = colorList
       else this.colorList = colorList.filter(val => val.c === color)
       this.colorSelected = this.colorList[0]
@@ -169,7 +172,9 @@ export default {
       let random = colorList[Math.floor(Math.random() * colorList.length)]
       this.changeColor(random)
     },
-    listAnime (el) {
+    listAnime (el, isInit) {
+      if (this.lastEls && isInit) { anime.remove(this.lastEls) }
+      this.lastEls = el
       anime({
         targets: el,
         translateY: [250, 0],
@@ -225,26 +230,32 @@ export default {
     width: 100px;
     flex-grow: 1;
     transition: all 1s;
-    .series,.share,.copy,.random{
+    .series,
+    .share,
+    .copy,
+    .random {
       position: absolute;
       height: 1.2rem;
       width: 1.2rem;
       bottom: 1.5rem;
     }
-    .share,.copy,.random{
+    .share,
+    .copy,
+    .random {
+      transition: all 1s;
       fill: #0c0c0c;
     }
     .series {
-      right: 1+1.6*0rem;
+      right: 1+1.6 * 0rem;
     }
     .share {
-      right: 1+1.6*1rem;
+      right: 1+1.6 * 1rem;
     }
     .copy {
-      right: 1+1.6*2rem;
+      right: 1+1.6 * 2rem;
     }
     .random {
-      right: 1+1.6*3rem;
+      right: 1+1.6 * 3rem;
     }
     .romaji {
       position: absolute;
