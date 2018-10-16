@@ -59,6 +59,3 @@ npm run test:unit
 ### Changelog
 Read in [wiki](https://github.com/ssshooter/nippon-color/wiki/Changelog)
 
-## v0.9.3
-- Click to copy hex
-- Optimize scroll animate 
